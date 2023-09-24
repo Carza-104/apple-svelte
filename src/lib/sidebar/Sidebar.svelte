@@ -2,9 +2,17 @@
 <script>
     export let id = undefined;
     export let style = undefined;
+
+    let windowHeight = undefined;
+    let heightStyle = undefined;
+    /* This causes the value to change after <svelte:window> has been loaded. */
+    setTimeout(() => {
+        heightStyle = `${windowHeight}px`;
+    }, 0);
 </script>
 
-<aside {id} {style}>
+<svelte:window bind:innerHeight={windowHeight} />
+<aside {id} style="{style}; height: {heightStyle}">
     <slot />
 </aside>
 
@@ -13,7 +21,6 @@
         background-color: var(--bg-grouped-primary);
         box-shadow: 0.5px 0px rgb(60, 60, 67, 0.36);
         float: left;
-        height: 100vh;
         max-width: 320px;
         overflow: scroll;
         position: sticky;
