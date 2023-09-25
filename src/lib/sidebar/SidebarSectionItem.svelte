@@ -1,5 +1,6 @@
 <!-- @format -->
 <script>
+    export let inputGroup = "sidebar-section-item";
     export let state = "default";
     /* export let state = "selected"; */
     /* export let state = "selected-secondary"; */
@@ -73,7 +74,7 @@
             <input
                 class="hidden-input"
                 {id}
-                name="sidebar-section-item"
+                name={inputGroup}
                 on:click={onPress}
                 type="radio"
             />
@@ -82,7 +83,7 @@
                 checked
                 class="hidden-input"
                 {id}
-                name="sidebar-section-item"
+                name={inputGroup}
                 on:click={onPress}
                 type="radio"
             />

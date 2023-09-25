@@ -60,10 +60,10 @@
 
     input {
         display: flex;
-        flex: 1;
         font-size: 17px;
         font-weight: 400;
         line-height: 22px;
+        width: 100%;
     }
 
     input::placeholder {

@@ -1,5 +1,6 @@
 <!-- @format -->
 <script>
+    export let inputGroup = "tab-bar-button";
     export let state = "default";
     /* export let state = "selected"; */
     export let symbol = "star";
@@ -16,7 +17,7 @@
             checked
             class="hidden-input"
             {id}
-            name="tab-bar-button"
+            name={inputGroup}
             on:click={onPress}
             type="radio"
         />
@@ -24,7 +25,7 @@
         <input
             class="hidden-input"
             {id}
-            name="tab-bar-button"
+            name={inputGroup}
             on:click={onPress}
             type="radio"
         />

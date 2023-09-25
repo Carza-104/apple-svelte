@@ -1,5 +1,6 @@
 <!-- @format -->
 <script>
+    export let inputGroup = "segmented-control-button";
     export let state = "default";
     /* export let state = "selected"; */
     export let label = "Label";
@@ -15,7 +16,7 @@
             <input
                 class="hidden-input"
                 {id}
-                name="segmented-control-button"
+                name={inputGroup}
                 on:click={onPress}
                 type="radio"
             />
@@ -24,7 +25,7 @@
                 checked
                 class="hidden-input"
                 {id}
-                name="segmented-control-button"
+                name={inputGroup}
                 on:click={onPress}
                 type="radio"
             />
