@@ -146,6 +146,7 @@
 		border-radius: 50%;
 		display: flex;
 		justify-content: center;
+		white-space: pre;
 	}
 
 	.primary {
@@ -157,6 +158,7 @@
 	.text-button {
 		align-items: center;
 		display: flex;
+		white-space: pre;
 		width: min-content;
 	}
 
