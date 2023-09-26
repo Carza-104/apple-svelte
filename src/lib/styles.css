@@ -1,0 +1,497 @@
+/** @format */
+
+:root {
+	color-scheme: light dark;
+	/* Font families: */
+	--sans-serif-font-family: ui-sans-serif, 'SF Pro', Roboto, 'Fira Sans', Oxygen, Ubuntu, 'Segoe UI',
+		'Helvetica Neue', 'Noto Sans', Arial, sans-serif;
+	--monospace-font-family: ui-monospace, 'SF Mono', 'Roboto Mono', 'Fira Mono', 'Oxygen Mono',
+		'Ubuntu Mono', 'Cascadia Code', Menlo, 'Noto Sans Mono', Consolas, monospace;
+	--symbol-font-family: 'Material Symbols Rounded';
+
+	/* Symbol sizes: */
+	--small-symbol-font-size-multiplier: 1.01680672269;
+	--medium-symbol-font-size-multiplier: 1.2840336134;
+	--large-symbol-font-size-multiplier: 1.6394957983;
+
+	/* Materials: */
+	--materials-background-blend-mode: color-dodge;
+	--materials-thick: rgb(239, 239, 239, 0.97);
+	--materials-regular: rgb(229, 229, 229, 0.82);
+	--materials-thin: rgb(207, 207, 207, 0.7);
+	--materials-ultrathin: rgb(201, 201, 201, 0.44);
+	--materials-chrome-background-blend-mode: hard-light;
+	--materials-chrome: rgb(255, 255, 255, 0.75);
+
+	/* Colors: */
+	--colors-accent: var(--colors-blue);
+	--colors-accent-2: var(--colors-blue-2);
+	--colors-red: #ff3b30;
+	--colors-red-2: rgb(255, 59, 48, 0.15);
+	--colors-orange: #ff9500;
+	--colors-orange-2: rgb(255, 149, 0, 0.15);
+	--colors-yellow: #fc0;
+	--colors-yellow-2: rgb(255, 204, 0, 0.15);
+	--colors-green: #34c759;
+	--colors-green-2: rgb(52, 199, 89, 0.15);
+	--colors-mint: #00c7be;
+	--colors-mint-2: rgb(0, 199, 190, 0.15);
+	--colors-teal: #30b0c7;
+	--colors-teal-2: rgb(48, 176, 199, 0.15);
+	--colors-cyan: #32ade6;
+	--colors-cyan-2: rgb(50, 173, 230, 0.15);
+	--colors-blue: #007aff;
+	--colors-blue-2: rgb(0, 122, 255, 0.15);
+	--colors-indigo: #5856d6;
+	--colors-indigo-2: rgb(88, 86, 214, 0.15);
+	--colors-purple: #af52de;
+	--colors-purple-2: rgb(175, 82, 222, 0.15);
+	--colors-pink: #ff2d55;
+	--colors-pink-2: rgb(255, 45, 85, 0.15);
+	--colors-brown: #a2845e;
+	--colors-brown-2: rgb(162, 132, 94, 0.15);
+
+	/* Grays: */
+	--grays-black: #000;
+	--grays-gray: #8e8e93;
+	--grays-gray-2: #aeaeb2;
+	--grays-gray-3: #c7c7cc;
+	--grays-gray-4: #d1d1d6;
+	--grays-gray-5: #e5e5ea;
+	--grays-gray-6: #f2f2f7;
+	--grays-white: #fff;
+
+	/* Backgrounds: */
+	--bg-primary: #fff;
+	--bg-secondary: #f2f2f7;
+	--bg-tertiary: #fff;
+
+	/* Labels: */
+	--labels-primary: #000;
+	--labels-secondary: rgb(60, 60, 67, 0.6);
+	--labels-tertiary: rgb(60, 60, 67, 0.3);
+	--labels-quaternary: rgb(60, 60, 67, 0.18);
+
+	/* Separators: */
+	--separators-opaque: #c6c6c8;
+	--separators-non-opaque: rgb(60, 60, 67, 0.36);
+
+	/* Grouped backgrounds: */
+	--bg-grouped-primary: #f2f2f7;
+	--bg-grouped-secondary: #fff;
+	--bg-grouped-tertiary: #f2f2f7;
+
+	/* Fills: */
+	--fills-primary: rgb(120, 120, 128, 0.2);
+	--fills-secondary: rgb(120, 120, 128, 0.16);
+	--fills-tertiary: rgb(118, 118, 128, 0.12);
+	--fills-quaternary: rgb(116, 116, 128, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		/* Materials: */
+		--materials-background-blend-mode: overlay;
+		--materials-thick: rgb(36, 36, 36, 0.9);
+		--materials-regular: rgb(41, 41, 41, 0.82);
+		--materials-thin: rgb(47, 47, 47, 0.7);
+		--materials-ultrathin: rgb(47, 47, 47, 0.55);
+		--materials-chrome: rgb(0, 0, 0, 0.75);
+
+		/* Colors: */
+		--colors-red: #ff453a;
+		--colors-red-2: rgb(255, 69, 58, 0.15);
+		--colors-orange: #ff9f0a;
+		--colors-orange-2: rgb(255, 159, 10, 0.15);
+		--colors-yellow: #ffd60a;
+		--colors-yellow-2: rgb(255, 214, 10, 0.15);
+		--colors-green: #30d158;
+		--colors-green-2: rgb(48, 209, 88, 0.15);
+		--colors-mint: #63e6e2;
+		--colors-mint-2: rgb(99, 230, 226, 0.15);
+		--colors-teal: #40cbe0;
+		--colors-teal-2: rgb(64, 203, 224, 0.15);
+		--colors-cyan: #64d2ff;
+		--colors-cyan-2: rgb(100, 210, 255, 0.15);
+		--colors-blue: #0a84ff;
+		--colors-blue-2: rgb(10, 132, 255, 0.15);
+		--colors-indigo: #5e5ce6;
+		--colors-indigo-2: rgb(94, 92, 230, 0.15);
+		--colors-purple: #bf5af2;
+		--colors-purple-2: rgb(191, 90, 242, 0.15);
+		--colors-pink: #ff375f;
+		--colors-pink-2: rgb(255, 55, 95, 0.15);
+		--colors-brown: #ac8e68;
+		--colors-brown-2: rgb(172, 142, 104, 0.15);
+
+		/* Grays: */
+		--grays-black: #000;
+		--grays-gray: #8e8e93;
+		--grays-gray-2: #636366;
+		--grays-gray-3: #48484a;
+		--grays-gray-4: #3a3a3c;
+		--grays-gray-5: #2c2c2e;
+		--grays-gray-6: #1c1c1e;
+		--grays-white: #fff;
+
+		/* Backgrounds: */
+		--bg-primary-elevated: #1c1c1e;
+		--bg-secondary-elevated: #2c2c2e;
+		--bg-tertiary-elevated: #3a3a3c;
+		--bg-primary: #000;
+		--bg-secondary: #1c1c1e;
+		--bg-tertiary: #2c2c2e;
+
+		/* Labels: */
+		--labels-primary: #fff;
+		--labels-secondary: rgb(235, 235, 245, 0.6);
+		--labels-tertiary: rgb(235, 235, 245, 0.3);
+		--labels-quaternary: rgb(235, 235, 245, 0.16);
+
+		/* Separators: */
+		--separators-opaque: #38383a;
+		--separators-non-opaque: rgb(84, 84, 88, 0.65);
+
+		/* Grouped backgrounds: */
+		--bg-grouped-primary-elevated: #1c1c1e;
+		--bg-grouped-secondary-elevated: #2c2c2e;
+		--bg-grouped-tertiary-elevated: #3a3a3c;
+		--bg-grouped-primary: #000;
+		--bg-grouped-secondary: #1c1c1e;
+		--bg-grouped-tertiary: #2c2c2e;
+
+		/* Fills: */
+		--fills-primary: rgb(120, 120, 128, 0.36);
+		--fills-secondary: rgb(120, 120, 128, 0.32);
+		--fills-tertiary: rgb(118, 118, 128, 0.24);
+		--fills-quaternary: rgb(116, 116, 128, 0.18);
+	}
+}
+
+/* Body styles: */
+
+* {
+	margin-block-end: 0px;
+	margin-inline-end: 0px;
+	margin-block-start: 0px;
+	margin-inline-start: 0px;
+	-webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+	background: var(--fills-tertiary);
+	border-radius: 1px;
+	outline: var(--fills-tertiary) solid 4px;
+}
+
+a {
+	color: var(--colors-accent);
+	text-decoration: none;
+}
+
+body {
+	background: var(--bg-grouped-primary);
+	color: var(--labels-primary);
+	/* font: 400 17px/22px; */
+	font-family: var(--sans-serif-font-family);
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+button {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0px;
+	text-align: left;
+}
+
+button:active {
+	background: var(--fills-tertiary);
+	border-radius: 1px;
+	outline: var(--fills-tertiary) solid 4px;
+}
+
+code {
+	font-family: var(--monospace-font-family);
+}
+
+.hidden-input {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+}
+
+input {
+	background: transparent;
+	border: none;
+}
+
+input:focus {
+	background: transparent;
+	outline: none;
+}
+
+label {
+	cursor: pointer;
+}
+
+/* Text styles: */
+
+.large-title {
+	/* font: 400 34px/41px; */
+	font-size: 34px;
+	font-weight: 400;
+	line-height: 41px;
+}
+
+.large-title-emphasized {
+	/* font: 700 34px/41px; */
+	font-size: 34px;
+	font-weight: 700;
+	line-height: 41px;
+}
+
+.title1 {
+	/* font: 400 28px/34px; */
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 34px;
+}
+
+.title1-emphasized {
+	/* font: 700 28px/34px; */
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 34px;
+}
+
+.title2 {
+	/* font: 400 22px/28px; */
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 28px;
+}
+
+.title2-emphasized {
+	/* font: 700 22px/28px; */
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 28px;
+}
+
+.title3 {
+	/* font: 400 20px/25px; */
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 25px;
+}
+
+.title3-emphasized {
+	/* font: 590 20px/25px; */
+	font-size: 20px;
+	font-weight: 590;
+	line-height: 25px;
+}
+
+.headline {
+	/* font: 590 17px/22px; */
+	font-size: 17px;
+	font-weight: 590;
+	line-height: 22px;
+}
+
+.headline-italic {
+	/* font: italic 590 17px/22px; */
+	font-size: 17px;
+	font-style: italic;
+	font-weight: 590;
+	line-height: 22px;
+}
+
+.body {
+	/* font: 400 17px/22px; */
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.body-emphasized {
+	/* font: 590 17px/22px; */
+	font-size: 17px;
+	font-weight: 590;
+	line-height: 22px;
+}
+
+.body-italic {
+	/* font: italic 400 17px/22px; */
+	font-size: 17px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.body-emphasized-italic {
+	/* font: italic 590 17px/22px; */
+	font-size: 17px;
+	font-style: italic;
+	font-weight: 590;
+	line-height: 22px;
+}
+
+.callout {
+	/* font: 400 16px/21px; */
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 21px;
+}
+
+.callout-emphasized {
+	/* font: 590 16px/21px; */
+	font-size: 16px;
+	font-weight: 590;
+	line-height: 21px;
+}
+
+.callout-italic {
+	/* font: italic 400 16px/21px; */
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 21px;
+}
+
+.callout--emphasized-italic {
+	/* font: italic 590 16px/21px; */
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 590;
+	line-height: 21px;
+}
+
+.subheadline {
+	/* font: 400 15px/20px; */
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.subheadline-emphasized {
+	/* font: 590 15px/20px; */
+	font-size: 15px;
+	font-weight: 590;
+	line-height: 20px;
+}
+
+.subheadline-italic {
+	/* font: italic 400 15px/20px; */
+	font-size: 15px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.subheadline-emphasized-italic {
+	/* font: italic 590 15px/20px; */
+	font-size: 15px;
+	font-style: italic;
+	font-weight: 590;
+	line-height: 20px;
+}
+
+.footnote {
+	/* font: 400 13px/18px; */
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 18px;
+}
+
+.footnote-emphasized {
+	/* font: 590 13px/18px; */
+	font-size: 13px;
+	font-weight: 590;
+	line-height: 18px;
+}
+
+.footnote-italic {
+	/* font: italic 400 13px/18px; */
+	font-size: 13px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 18px;
+}
+
+.footnote-emphasized-italic {
+	/* font: italic 590 13px/18px; */
+	font-size: 13px;
+	font-style: italic;
+	font-weight: 590;
+	line-height: 18px;
+}
+
+.caption1 {
+	/* font: 400 12px/16px; */
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+.caption1-emphasized {
+	/* font: 510 12px/16px; */
+	font-size: 12px;
+	font-weight: 510;
+	line-height: 16px;
+}
+
+.caption1-italic {
+	/* font: italic 400 12px/16px; */
+	font-size: 12px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+.caption1-emphasized-italic {
+	/* font: italic 508 12px/16px; */
+	font-size: 12px;
+	font-style: italic;
+	font-weight: 508;
+	line-height: 16px;
+}
+
+.caption2 {
+	/* font: 400 11px/13px; */
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 13px;
+}
+
+.caption2-emphasized {
+	/* font: 590 11px/13px; */
+	font-size: 11px;
+	font-weight: 590;
+	line-height: 13px;
+}
+
+.caption2-italic {
+	/* font: italic 400 11px/13px; */
+	font-size: 11px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 13px;
+}
+
+.caption2-emphasized-italic {
+	/* font: italic 590 11px/13px; */
+	font-size: 11px;
+	font-style: italic;
+	font-weight: 590;
+	line-height: 13px;
+}
+
+.symbol {
+	font-family: var(--symbol-font-family);
+}
