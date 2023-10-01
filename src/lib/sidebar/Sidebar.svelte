@@ -4,10 +4,9 @@
 
 	let windowHeight = undefined;
 	let heightStyle = '100vh';
-	/* This causes the value to change after <svelte:window> has been loaded. */
-	setTimeout(() => {
+	$: {
 		heightStyle = `${windowHeight}px`;
-	}, 0);
+	}
 </script>
 
 <svelte:window bind:innerHeight={windowHeight} />
