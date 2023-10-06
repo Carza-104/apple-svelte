@@ -22,7 +22,7 @@
 		float: left;
 		max-width: 320px;
 		overflow: scroll;
-		position: fixed;
+		position: sticky;
 		top: 0px;
 		width: 100%;
 		z-index: 1;
