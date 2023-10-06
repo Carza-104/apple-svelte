@@ -10,6 +10,7 @@
 </script>
 
 <svelte:window bind:innerHeight={windowHeight} />
+
 <aside {id} style="{style}; height: {heightStyle}">
 	<slot />
 </aside>
@@ -21,7 +22,7 @@
 		float: left;
 		max-width: 320px;
 		overflow: scroll;
-		position: sticky;
+		position: fixed;
 		top: 0px;
 		width: 100%;
 		z-index: 1;

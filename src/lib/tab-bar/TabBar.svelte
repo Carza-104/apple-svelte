@@ -29,7 +29,7 @@
 		box-shadow: 0px -0.33px rgb(0, 0, 0, 0.3);
 		display: flex;
 		justify-content: space-between;
-		position: sticky;
+		position: fixed;
 		-webkit-backdrop-filter: blur(25px);
 	}
 

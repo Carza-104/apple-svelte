@@ -17,7 +17,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 13px 16px 42px;
-		position: sticky;
+		position: fixed;
 		-webkit-backdrop-filter: blur(10px);
 	}
 

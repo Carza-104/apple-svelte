@@ -1,0 +1,41 @@
+<script>
+	export let state = 'default';
+	/* export let state = 'destructive'; */
+	/* export let state = 'disabled'; */
+	export let label = 'Action';
+
+	export let id = undefined;
+	export let onPress = undefined;
+	export let style = undefined;
+
+	let colorStyle = 'unset';
+	if (state === 'default') {
+		colorStyle = 'var(--colors-accent)';
+	} else if (state === 'destructive') {
+		colorStyle = 'var(--colors-red)';
+	} else {
+		colorStyle = 'var(--grays-gray-2)';
+	}
+
+	if (state === 'disabled') {
+		onPress = undefined;
+	}
+</script>
+
+<button {id} {style} on:click={onPress}>
+	<p class="body" style="color: {colorStyle}">{label}</p>
+</button>
+
+<style>
+	button {
+		align-items: center;
+		backdrop-filter: blur(40px);
+		background: var(--materials-regular);
+		border-top: 0.33px solid var(--separators-non-opaque);
+		display: flex;
+		height: 56px;
+		justify-content: center;
+		-webkit-backdrop-filter: blur(40px);
+		width: 100%;
+	}
+</style>
