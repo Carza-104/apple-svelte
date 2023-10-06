@@ -1,3 +1,5 @@
+export { default as ActionSheet } from './action-sheet/ActionSheet.svelte';
+export { default as ActionSheetButton } from './action-sheet/ActionSheetButton.svelte';
 export { default as Button } from './button/Button.svelte';
 export { default as Collection } from './collection/Collection.svelte';
 export { default as List } from './list/List.svelte';
