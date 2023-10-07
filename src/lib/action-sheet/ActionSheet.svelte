@@ -46,9 +46,20 @@
 </label>
 
 <style>
+	:root {
+		color-scheme: light dark;
+		--background: rgb(0, 0, 0, 0.4);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--background: rgb(0, 0, 0, 0.6);
+		}
+	}
+
 	label {
 		align-items: center;
-		background: rgb(0, 0, 0, 0.4);
+		background: var(--background);
 		cursor: unset;
 		display: flex;
 		justify-content: center;
