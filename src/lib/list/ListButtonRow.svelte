@@ -42,4 +42,8 @@
 		flex: 1;
 		height: 100%;
 	}
+
+	label:last-child > button {
+		border-bottom: unset;
+	}
 </style>

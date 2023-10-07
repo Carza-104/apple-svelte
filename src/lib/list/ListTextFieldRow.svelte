@@ -43,4 +43,8 @@
 	input::placeholder {
 		color: var(--labels-secondary);
 	}
+
+	label:last-child > div {
+		border-bottom: unset;
+	}
 </style>
