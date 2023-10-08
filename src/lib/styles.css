@@ -22,9 +22,8 @@
 	--materials-chrome: rgb(255, 255, 255, 0.75);
 
 	/* Overlays: */
-	--focus-overlay: var(--fills-quaternary);
-	--press-overlay: var(--fills-tertiary);
-	--symbol-press-opacity: 50%;
+	--press-overlay: rgb(0, 0, 0, 0.1);
+	--symbol-press-opacity: 20%;
 
 	/* Colors: */
 	--colors-accent: var(--colors-blue);
@@ -100,6 +99,10 @@
 		--materials-thin: rgb(47, 47, 47, 0.7);
 		--materials-ultrathin: rgb(47, 47, 47, 0.55);
 		--materials-chrome: rgb(0, 0, 0, 0.75);
+
+		/* Overlays: */
+		--press-overlay: rgb(255, 255, 255, 0.7);
+		--symbol-press-opacity: 40%;
 
 		/* Colors: */
 		--colors-red: #ff453a;

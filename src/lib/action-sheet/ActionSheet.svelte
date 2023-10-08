@@ -121,13 +121,9 @@
 		width: 56px;
 	}
 
-	button:active {
-		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
-			var(--materials-regular);
-	}
-
+	button:active,
 	button:focus {
-		background: linear-gradient(var(--focus-overlay) 0%, var(--focus-overlay)),
+		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
 			var(--materials-regular);
 	}
 </style>

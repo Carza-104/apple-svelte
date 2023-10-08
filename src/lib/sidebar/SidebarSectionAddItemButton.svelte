@@ -44,11 +44,8 @@
 		line-height: 19px;
 	}
 
-	label:active {
-		background: var(--press-overlay);
-	}
-
+	label:active,
 	label:focus {
-		background: var(--focus-overlay);
+		background: var(--press-overlay);
 	}
 </style>
