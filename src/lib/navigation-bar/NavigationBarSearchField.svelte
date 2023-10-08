@@ -93,4 +93,12 @@
 	label:has(input:not(:focus)) + .label {
 		display: none;
 	}
+
+	.label:active {
+		opacity: var(--symbol-press-opacity);
+	}
+
+	.label:focus {
+		opacity: var(--symbol-press-opacity);
+	}
 </style>

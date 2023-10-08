@@ -15,6 +15,7 @@
 <style>
 	label {
 		align-items: center;
+		border-radius: 11px;
 		display: flex;
 		gap: 8px;
 		height: 44px;
@@ -41,5 +42,13 @@
 		font-size: 17px;
 		font-weight: 400;
 		line-height: 19px;
+	}
+
+	label:active {
+		background: var(--press-overlay);
+	}
+
+	label:focus {
+		background: var(--focus-overlay);
 	}
 </style>

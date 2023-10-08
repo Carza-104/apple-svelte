@@ -91,7 +91,7 @@
 		class="symbol-button"
 		{id}
 		on:click={onPress}
-		style="{style}; background: {backgroundStyle}; color: {colorStyle}; height: {heightStyle}; width: {widthStyle}"
+		style="{style}; --background: {backgroundStyle}; background: {backgroundStyle}; color: {colorStyle}; height: {heightStyle}; width: {widthStyle}"
 	>
 		{#if size === 'large'}
 			<p class="symbol primary">{symbol}</p>
@@ -104,7 +104,7 @@
 		class="text-button"
 		{id}
 		on:click={onPress}
-		style="{style}; background: {backgroundStyle}; border-radius: {borderRadiusStyle}; color: {colorStyle}; gap: {gapStyle}; padding: {paddingStyle}"
+		style="{style}; --background: {backgroundStyle}; background: {backgroundStyle}; border-radius: {borderRadiusStyle}; color: {colorStyle}; gap: {gapStyle}; padding: {paddingStyle}"
 	>
 		{#if size === 'large'}
 			<p class="body">{label}</p>
@@ -117,7 +117,7 @@
 		class="text-button"
 		{id}
 		on:click={onPress}
-		style="{style}; background: {backgroundStyle}; border-radius: {borderRadiusStyle}; color: {colorStyle}; gap: {gapStyle}; padding: {paddingStyle}"
+		style="{style}; --background: {backgroundStyle}; background: {backgroundStyle}; border-radius: {borderRadiusStyle}; color: {colorStyle}; gap: {gapStyle}; padding: {paddingStyle}"
 	>
 		{#if size === 'large'}
 			<p class="symbol primary">{symbol}</p>
@@ -166,5 +166,13 @@
 		font-size: calc(15px * var(--medium-symbol-font-size-multiplier));
 		font-weight: calc(400 / var(--medium-symbol-font-size-multiplier));
 		line-height: 20px;
+	}
+
+	button:active {
+		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)), var(--background) !important;
+	}
+
+	button:focus {
+		background: linear-gradient(var(--focus-overlay) 0%, var(--focus-overlay)), var(--background) !important;
 	}
 </style>

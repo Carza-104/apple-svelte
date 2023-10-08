@@ -46,4 +46,14 @@
 	label:last-child > button {
 		border-bottom: unset;
 	}
+
+	label:active {
+		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
+			var(--bg-grouped-secondary);
+	}
+
+	label:focus {
+		background: linear-gradient(var(--focus-overlay) 0%, var(--focus-overlay)),
+			var(--bg-grouped-secondary);
+	}
 </style>

@@ -36,4 +36,12 @@
 		font-weight: 400;
 		line-height: 22px;
 	}
+
+	button:active p {
+		opacity: var(--symbol-press-opacity);
+	}
+
+	button:focus p {
+		opacity: var(--symbol-press-opacity);
+	}
 </style>

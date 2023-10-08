@@ -173,4 +173,14 @@
 	.row:last-child > .title-and-trailing-accessories {
 		border-bottom: unset;
 	}
+
+	.row:active {
+		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
+			var(--bg-grouped-secondary);
+	}
+
+	.row:focus {
+		background: linear-gradient(var(--focus-overlay) 0%, var(--focus-overlay)),
+			var(--bg-grouped-secondary);
+	}
 </style>

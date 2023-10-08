@@ -21,6 +21,11 @@
 	--materials-chrome-background-blend-mode: hard-light;
 	--materials-chrome: rgb(255, 255, 255, 0.75);
 
+	/* Overlays: */
+	--focus-overlay: var(--fills-quaternary);
+	--press-overlay: var(--fills-tertiary);
+	--symbol-press-opacity: 50%;
+
 	/* Colors: */
 	--colors-accent: var(--colors-blue);
 	--colors-accent-2: var(--colors-blue-2);
@@ -178,14 +183,20 @@
 }
 
 *:focus {
-	background: var(--fills-tertiary);
-	border-radius: 1px;
-	outline: var(--fills-tertiary) solid 4px;
+	outline: unset;
 }
 
 a {
 	color: var(--colors-accent);
 	text-decoration: none;
+}
+
+a:active {
+	opacity: var(--symbol-press-opacity);
+}
+
+a:focus {
+	opacity: var(--symbol-press-opacity);
 }
 
 body {

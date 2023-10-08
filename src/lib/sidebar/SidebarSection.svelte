@@ -94,4 +94,12 @@
 		font-weight: calc(590 / var(--small-symbol-font-size-multiplier));
 		line-height: 22px;
 	}
+
+	button:active {
+		opacity: var(--symbol-press-opacity);
+	}
+
+	button:focus {
+		opacity: var(--symbol-press-opacity);
+	}
 </style>

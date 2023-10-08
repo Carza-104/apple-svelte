@@ -55,4 +55,12 @@
 		font-weight: 590;
 		line-height: 22px;
 	}
+
+	button:active {
+		opacity: var(--symbol-press-opacity);
+	}
+
+	button:focus {
+		opacity: var(--symbol-press-opacity);
+	}
 </style>

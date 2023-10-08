@@ -221,4 +221,12 @@
 		font-weight: calc(590 / var(--small-symbol-font-size-multiplier));
 		line-height: 22px;
 	}
+
+	label:active {
+		background: var(--press-overlay);
+	}
+
+	label:focus {
+		background: var(--focus-overlay);
+	}
 </style>

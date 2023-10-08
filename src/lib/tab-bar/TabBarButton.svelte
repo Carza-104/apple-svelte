@@ -44,4 +44,12 @@
 		font-size: 10px;
 		font-weight: 510;
 	}
+
+	input:active ~ p {
+		opacity: var(--symbol-press-opacity);
+	}
+
+	input:focus ~ p {
+		opacity: var(--symbol-press-opacity);
+	}
 </style>
