@@ -206,12 +206,6 @@ button {
 	text-align: left;
 }
 
-button:active {
-	background: var(--fills-tertiary);
-	border-radius: 1px;
-	outline: var(--fills-tertiary) solid 4px;
-}
-
 code {
 	font-family: var(--monospace-font-family);
 }
@@ -493,4 +487,6 @@ label {
 
 .symbol {
 	font-family: var(--symbol-font-family);
+	user-select: none;
+	-webkit-user-select: none;
 }
