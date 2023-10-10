@@ -7,9 +7,18 @@
 	export let id = undefined;
 	export let onPress = undefined;
 	export let style = undefined;
+
+	let inputElement = undefined;
+
+	function handlePress() {
+		if (onPress) {
+			onPress();
+		}
+		inputElement.blur();
+	}
 </script>
 
-<button {id} on:click={onPress} {style}>
+<button bind:this={inputElement} {id} on:click={handlePress} {style}>
 	{#if type === 'symbol'}
 		<p class="symbol">{symbol}</p>
 	{:else}
@@ -37,10 +46,7 @@
 		line-height: 22px;
 	}
 
-	button:active p {
-		opacity: var(--symbol-press-opacity);
-	}
-
+	button:active p,
 	button:focus p {
 		opacity: var(--symbol-press-opacity);
 	}

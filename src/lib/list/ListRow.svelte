@@ -34,6 +34,27 @@
 			checkmarkEditButtonState = 'default';
 		}
 	}
+
+	let inputElement = undefined;
+
+	function handleCheckmarkPress() {
+		onCheckmarkPress();
+		inputElement.blur();
+	}
+
+	function handlePlusPress() {
+		if (onPlusPress) {
+			onPlusPress();
+		}
+		inputElement.blur();
+	}
+
+	function handleMinusPress() {
+		if (onMinusPress) {
+			onMinusPress();
+		}
+		inputElement.blur();
+	}
 </script>
 
 <label class="row" {id} style="{style}; height: {heightStyle}">
@@ -42,10 +63,11 @@
 			{#if checkmarkEditButtonState === 'default'}
 				<label class="default-edit-button">
 					<input
+						bind:this={inputElement}
 						class="hidden-input"
 						id={checkmarkEditButtonId}
 						name="list-row"
-						on:click={onCheckmarkPress}
+						on:click={handleCheckmarkPress}
 						type="checkbox"
 					/>
 				</label>
@@ -53,19 +75,24 @@
 				<label class="symbol primary">
 					{checkmarkSymbol}
 					<input
+						bind:this={inputElement}
 						checked
 						class="hidden-input"
 						id={checkmarkEditButtonId}
 						name="list-row"
-						on:click={onCheckmarkPress}
+						on:click={handleCheckmarkPress}
 						type="checkbox"
 					/>
 				</label>
 			{/if}
 		{:else if editButtonType === 'plus'}
-			<button class="symbol secondary" on:click={onPlusPress}>{plusSymbol}</button>
+			<button bind:this={inputElement} class="symbol secondary" on:click={handlePlusPress}
+				>{plusSymbol}</button
+			>
 		{:else}
-			<button class="symbol tertiary" on:click={onMinusPress}>{minusSymbol}</button>
+			<button bind:this={inputElement} class="symbol tertiary" on:click={handleMinusPress}
+				>{minusSymbol}</button
+			>
 		{/if}
 	{/if}
 	<slot name="image" />

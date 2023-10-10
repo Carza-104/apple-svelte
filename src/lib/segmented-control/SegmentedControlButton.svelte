@@ -7,14 +7,38 @@
 	export let id = undefined;
 	export let onPress = undefined;
 	export let style = undefined;
+
+	let inputElement = undefined;
+
+	function handlePress() {
+		if (onPress) {
+			onPress();
+		}
+		inputElement.blur();
+	}
 </script>
 
 <div class="button">
 	<label {style}>
 		{#if state === 'default'}
-			<input class="hidden-input" {id} name={inputGroup} on:click={onPress} type="radio" />
+			<input
+				bind:this={inputElement}
+				class="hidden-input"
+				{id}
+				name={inputGroup}
+				on:click={handlePress}
+				type="radio"
+			/>
 		{:else}
-			<input checked class="hidden-input" {id} name={inputGroup} on:click={onPress} type="radio" />
+			<input
+				bind:this={inputElement}
+				checked
+				class="hidden-input"
+				{id}
+				name={inputGroup}
+				on:click={handlePress}
+				type="radio"
+			/>
 		{/if}
 		<p>{label}</p>
 	</label>

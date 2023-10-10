@@ -65,14 +65,50 @@
 			disclosureState = 'open';
 		}
 	}
+
+	let inputElement = undefined;
+
+	function handlePress() {
+		if (onPress) {
+			onPress();
+		}
+		inputElement.blur();
+	}
+
+	function handleTrailingSymbolPress() {
+		if (onTrailingSymbolPress) {
+			onTrailingSymbolPress();
+		}
+		inputElement.blur();
+	}
+
+	function handleDisclosurePress() {
+		onDisclosurePress();
+		inputElement.blur();
+	}
 </script>
 
 <label class="item" style="{style}; padding: {paddingStyle}">
 	{#if !showDisclosure}
 		{#if state === 'default'}
-			<input class="hidden-input" {id} name={inputGroup} on:click={onPress} type="radio" />
+			<input
+				bind:this={inputElement}
+				class="hidden-input"
+				{id}
+				name={inputGroup}
+				on:click={handlePress}
+				type="radio"
+			/>
 		{:else}
-			<input checked class="hidden-input" {id} name={inputGroup} on:click={onPress} type="radio" />
+			<input
+				bind:this={inputElement}
+				checked
+				class="hidden-input"
+				{id}
+				name={inputGroup}
+				on:click={handlePress}
+				type="radio"
+			/>
 		{/if}
 	{/if}
 	<div class="leading">
@@ -102,9 +138,11 @@
 			<p class="detail">{detail}</p>
 		{/if}
 		{#if showTrailingSymbol}
-			<button class="symbol secondary" on:click={onTrailingSymbolPress}>{trailingSymbol}</button>
+			<button bind:this={inputElement} class="symbol secondary" on:click={handleTrailingSymbolPress}
+				>{trailingSymbol}</button
+			>
 		{:else if showDisclosure}
-			<button class="symbol tertiary" on:click={onDisclosurePress}>
+			<button bind:this={inputElement} class="symbol tertiary" on:click={handleDisclosurePress}>
 				{#if disclosureState === 'open'}
 					{openDisclosure}
 				{:else}

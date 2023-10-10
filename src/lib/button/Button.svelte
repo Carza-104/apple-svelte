@@ -84,13 +84,23 @@
 	if (state === 'disabled') {
 		onPress = undefined;
 	}
+
+	let inputElement = undefined;
+
+	function handlePress() {
+		if (onPress) {
+			onPress();
+		}
+		inputElement.blur();
+	}
 </script>
 
 {#if labelType === 'symbol'}
 	<button
+		bind:this={inputElement}
 		class="symbol-button"
 		{id}
-		on:click={onPress}
+		on:click={handlePress}
 		style="{style}; --background: {backgroundStyle}; background: {backgroundStyle}; color: {colorStyle}; height: {heightStyle}; width: {widthStyle}"
 	>
 		{#if size === 'large'}
@@ -101,9 +111,10 @@
 	</button>
 {:else if labelType === 'text'}
 	<button
+		bind:this={inputElement}
 		class="text-button"
 		{id}
-		on:click={onPress}
+		on:click={handlePress}
 		style="{style}; --background: {backgroundStyle}; background: {backgroundStyle}; border-radius: {borderRadiusStyle}; color: {colorStyle}; gap: {gapStyle}; padding: {paddingStyle}"
 	>
 		{#if size === 'large'}
@@ -114,9 +125,10 @@
 	</button>
 {:else}
 	<button
+		bind:this={inputElement}
 		class="text-button"
 		{id}
-		on:click={onPress}
+		on:click={handlePress}
 		style="{style}; --background: {backgroundStyle}; background: {backgroundStyle}; border-radius: {borderRadiusStyle}; color: {colorStyle}; gap: {gapStyle}; padding: {paddingStyle}"
 	>
 		{#if size === 'large'}

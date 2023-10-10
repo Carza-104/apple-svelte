@@ -18,9 +18,18 @@
 	if (state === 'disabled') {
 		onPress = undefined;
 	}
+
+	let inputElement = undefined;
+
+	function handlePress() {
+		if (onPress) {
+			onPress();
+		}
+		inputElement.blur();
+	}
 </script>
 
-<button {id} on:click={onPress} style="{style}; color: {colorStyle}">
+<button bind:this={inputElement} {id} on:click={handlePress} style="{style}; color: {colorStyle}">
 	<p class="symbol">{symbol}</p>
 	<p class="label">{label}</p>
 </button>
@@ -45,10 +54,7 @@
 		line-height: 22px;
 	}
 
-	button:active {
-		opacity: var(--symbol-press-opacity);
-	}
-
+	button:active,
 	button:focus {
 		opacity: var(--symbol-press-opacity);
 	}

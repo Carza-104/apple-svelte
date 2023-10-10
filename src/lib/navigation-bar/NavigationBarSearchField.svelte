@@ -14,6 +14,15 @@
         let searchField = document.querySelector('input[type="text"]');
         searchField.value = "";
     } */
+
+	let inputElement = undefined;
+
+	function handlePress() {
+		if (onCancelPress) {
+			onCancelPress();
+		}
+		inputElement.blur();
+	}
 </script>
 
 <div class="search-field" {style}>
@@ -25,7 +34,9 @@
 			<input {id} {placeholder} type="text" />
 		{/if}
 		<p class="symbol secondary">{dictationSymbol}</p>
-		<button class="symbol secondary" on:click={onCancelPress}>{cancelSymbol}</button>
+		<button bind:this={inputElement} class="symbol secondary" on:click={handlePress}
+			>{cancelSymbol}</button
+		>
 	</label>
 	<button class="label" on:click={onCancelPress}>{cancelLabel}</button>
 </div>
@@ -94,10 +105,7 @@
 		display: none;
 	}
 
-	.label:active {
-		opacity: var(--symbol-press-opacity);
-	}
-
+	.label:active,
 	.label:focus {
 		opacity: var(--symbol-press-opacity);
 	}

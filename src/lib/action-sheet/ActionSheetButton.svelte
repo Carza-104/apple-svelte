@@ -20,9 +20,18 @@
 	if (state === 'disabled') {
 		onPress = undefined;
 	}
+
+	let inputElement = undefined;
+
+	function handlePress() {
+		if (onPress) {
+			onPress();
+		}
+		inputElement.blur();
+	}
 </script>
 
-<button {id} {style} on:click={onPress}>
+<button bind:this={inputElement} {id} {style} on:click={handlePress}>
 	<p class="body" style="color: {colorStyle}">{label}</p>
 </button>
 

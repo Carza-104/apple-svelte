@@ -35,13 +35,20 @@
 			state = 'open';
 		}
 	}
+
+	let inputElement = undefined;
+
+	function handlePress() {
+		onPress();
+		inputElement.blur();
+	}
 </script>
 
 <section>
 	{#if showHeading}
 		<label {id} style="{style}; border-bottom: {borderBottomStyle}">
 			<p>{heading}</p>
-			<button class="symbol" on:click={onPress}>
+			<button bind:this={inputElement} class="symbol" on:click={handlePress}>
 				{#if state === 'open'}
 					{openSymbol}
 				{:else}
@@ -95,10 +102,7 @@
 		line-height: 22px;
 	}
 
-	button:active {
-		opacity: var(--symbol-press-opacity);
-	}
-
+	button:active,
 	button:focus {
 		opacity: var(--symbol-press-opacity);
 	}

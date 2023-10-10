@@ -8,13 +8,37 @@
 	export let id = undefined;
 	export let onPress = undefined;
 	export let style = undefined;
+
+	let inputElement = undefined;
+
+	function handlePress() {
+		if (onPress) {
+			onPress();
+		}
+		inputElement.blur();
+	}
 </script>
 
 <label {style}>
 	{#if state === 'selected'}
-		<input checked class="hidden-input" {id} name={inputGroup} on:click={onPress} type="radio" />
+		<input
+			bind:this={inputElement}
+			checked
+			class="hidden-input"
+			{id}
+			name={inputGroup}
+			on:click={handlePress}
+			type="radio"
+		/>
 	{:else}
-		<input class="hidden-input" {id} name={inputGroup} on:click={onPress} type="radio" />
+		<input
+			bind:this={inputElement}
+			class="hidden-input"
+			{id}
+			name={inputGroup}
+			on:click={handlePress}
+			type="radio"
+		/>
 	{/if}
 	<p class="symbol">{symbol}</p>
 	<p class="label">{label}</p>
@@ -45,10 +69,7 @@
 		font-weight: 510;
 	}
 
-	input:active ~ p {
-		opacity: var(--symbol-press-opacity);
-	}
-
+	input:active ~ p,
 	input:focus ~ p {
 		opacity: var(--symbol-press-opacity);
 	}

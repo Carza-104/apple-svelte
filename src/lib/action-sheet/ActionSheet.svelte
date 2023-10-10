@@ -19,12 +19,21 @@
 		heightStyle = `${windowHeight}px`;
 		widthStyle = `${windowWidth}px`;
 	}
+
+	let inputElement = undefined;
+
+	function handlePress() {
+		if (onCancelPress) {
+			onCancelPress();
+		}
+		inputElement.blur();
+	}
 </script>
 
 <svelte:window bind:innerHeight={windowHeight} bind:innerWidth={windowWidth} />
 
 <label style="height: {heightStyle}; width: {widthStyle}">
-	<button class="hidden-input" on:click={onCancelPress} />
+	<button bind:this={inputElement} class="hidden-input" on:click={handlePress} />
 	<div class="action-sheet" {id} {style}>
 		<div class="buttons">
 			{#if showHeader}

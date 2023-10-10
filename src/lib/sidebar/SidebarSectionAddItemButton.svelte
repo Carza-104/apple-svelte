@@ -5,10 +5,21 @@
 	export let id = undefined;
 	export let onPress = undefined;
 	export let style = undefined;
+
+	let inputElement = undefined;
+
+	function handlePress() {
+		if (onPress) {
+			onPress();
+		}
+		inputElement.blur();
+	}
 </script>
 
 <label {id} {style}>
-	<button aria-label="Add item" class="symbol" on:click={onPress}>{symbol}</button>
+	<button aria-label="Add item" bind:this={inputElement} class="symbol" on:click={handlePress}
+		>{symbol}</button
+	>
 	<p>{title}</p>
 </label>
 
