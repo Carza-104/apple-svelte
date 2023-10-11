@@ -28,18 +28,14 @@
 		}
 	}
 
-	function onPress() {
+	let inputElement = undefined;
+
+	function handlePress() {
 		if (state === 'open') {
 			state = 'closed';
 		} else {
 			state = 'open';
 		}
-	}
-
-	let inputElement = undefined;
-
-	function handlePress() {
-		onPress();
 		inputElement.blur();
 	}
 </script>

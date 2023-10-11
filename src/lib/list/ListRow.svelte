@@ -27,18 +27,14 @@
 		heightStyle = '60px';
 	}
 
-	function onCheckmarkPress() {
+	let inputElement = undefined;
+
+	function handleCheckmarkPress() {
 		if (checkmarkEditButtonState === 'default') {
 			checkmarkEditButtonState = 'selected';
 		} else {
 			checkmarkEditButtonState = 'default';
 		}
-	}
-
-	let inputElement = undefined;
-
-	function handleCheckmarkPress() {
-		onCheckmarkPress();
 		inputElement.blur();
 	}
 

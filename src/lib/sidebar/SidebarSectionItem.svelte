@@ -58,14 +58,6 @@
 		}
 	}
 
-	function onDisclosurePress() {
-		if (disclosureState === 'open') {
-			disclosureState = 'closed';
-		} else {
-			disclosureState = 'open';
-		}
-	}
-
 	let inputElement = undefined;
 
 	function handlePress() {
@@ -83,7 +75,11 @@
 	}
 
 	function handleDisclosurePress() {
-		onDisclosurePress();
+		if (disclosureState === 'open') {
+			disclosureState = 'closed';
+		} else {
+			disclosureState = 'open';
+		}
 		inputElement.blur();
 	}
 </script>
