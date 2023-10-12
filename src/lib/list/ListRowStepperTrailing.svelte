@@ -26,6 +26,7 @@
 	}
 
 	.symbol {
+		color: var(--labels-primary);
 		font-size: calc(17px * var(--medium-symbol-font-size-multiplier));
 		font-weight: calc(400 / var(--medium-symbol-font-size-multiplier));
 		line-height: 22px;
