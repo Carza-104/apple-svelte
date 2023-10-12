@@ -1,6 +1,6 @@
 {
 	"name": "apple-svelte",
-	"version": "0.2.12",
+	"version": "0.2.13",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -38,5 +38,17 @@
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"type": "module"
+	"type": "module",
+	"description": "Component library for Svelte based on Apple's Human Interface design language.",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Carza-104/apple-svelte.git"
+	},
+	"keywords": [
+		"apple",
+		"svelte",
+		"component",
+		"library"
+	],
+	"license": "MIT"
 }
