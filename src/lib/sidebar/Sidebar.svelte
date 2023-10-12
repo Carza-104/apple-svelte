@@ -21,7 +21,7 @@
 		box-shadow: 0.5px 0px rgb(60, 60, 67, 0.36);
 		float: left;
 		max-width: 320px;
-		overflow: scroll;
+		overflow-y: scroll;
 		position: sticky;
 		top: 0px;
 		width: 100%;
