@@ -1,6 +1,6 @@
 {
 	"name": "apple-svelte",
-	"version": "0.2.13",
+	"version": "0.2.14",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -44,6 +44,7 @@
 		"type": "git",
 		"url": "https://github.com/Carza-104/apple-svelte.git"
 	},
+	"homepage": "https://apple-svelte.vercel.app",
 	"keywords": [
 		"apple",
 		"svelte",
