@@ -1,4 +1,5 @@
 <script>
+	export let value = undefined;
 	export let searchSymbol = 'search';
 	export let showPlaceholder = false;
 	export let placeholder = 'Search';
@@ -29,9 +30,9 @@
 	<label>
 		<p class="symbol primary">{searchSymbol}</p>
 		{#if showPlaceholder}
-			<input {id} type="text" />
+			<input bind:value {id} type="text" />
 		{:else}
-			<input {id} {placeholder} type="text" />
+			<input bind:value {id} {placeholder} type="text" />
 		{/if}
 		<p class="symbol secondary">{dictationSymbol}</p>
 		<button bind:this={inputElement} class="symbol secondary" on:click={handlePress}

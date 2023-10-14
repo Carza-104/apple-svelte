@@ -1,4 +1,5 @@
 <script>
+	export let value = undefined;
 	export let title = 'Title';
 	export let placeholder = 'Value';
 
@@ -10,7 +11,7 @@
 <label {style}>
 	<div>
 		<p class="body">{title}</p>
-		<input class="body" {id} on:click={onPress} {placeholder} type="text" />
+		<input bind:value class="body" {id} on:click={onPress} {placeholder} type="text" />
 	</div>
 </label>
 
