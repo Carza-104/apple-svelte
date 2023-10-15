@@ -1,4 +1,6 @@
 <script>
+	export let state = 'default';
+	/* export let state = 'hidden'; */
 	export let showHeader = false;
 	export let headerTitle = 'Header Title';
 	export let showDescription = false;
@@ -7,7 +9,6 @@
 	export let cancelButtonLabel = 'Cancel';
 
 	export let id = undefined;
-	export let onCancelPress = undefined;
 	export let style = undefined;
 
 	let windowHeight = undefined;
@@ -20,19 +21,33 @@
 		widthStyle = `${windowWidth}px`;
 	}
 
+	let displayStyle = 'flex';
+
+	$: {
+		if (state === 'default') {
+			displayStyle = 'flex';
+		} else {
+			displayStyle = 'none';
+		}
+	}
+
 	let inputElement = undefined;
 
 	function handlePress() {
-		if (onCancelPress) {
-			onCancelPress();
-		}
+		state = 'hidden';
 		inputElement.blur();
 	}
 </script>
 
-<svelte:window bind:innerHeight={windowHeight} bind:innerWidth={windowWidth} />
+<svelte:window
+	bind:innerHeight={windowHeight}
+	bind:innerWidth={windowWidth}
+	on:keydown={(e) => {
+		if (e.key === 'Escape') state = 'hidden';
+	}}
+/>
 
-<label style="height: {heightStyle}; width: {widthStyle}">
+<label style="display: {displayStyle}; height: {heightStyle}; width: {widthStyle}">
 	<button bind:this={inputElement} class="hidden-input" on:click={handlePress} />
 	<div class="action-sheet" {id} {style}>
 		<div class="buttons">
@@ -47,7 +62,7 @@
 			<slot />
 		</div>
 		{#if showCancelButton}
-			<button class="cancel" on:click={onCancelPress}>
+			<button class="cancel" on:click={handlePress}>
 				<p class="body-emphasized">{cancelButtonLabel}</p>
 			</button>
 		{/if}
@@ -71,11 +86,13 @@
 		background: var(--background);
 		cursor: unset;
 		display: flex;
+		height: 100vh;
 		justify-content: center;
 		left: 0px;
 		padding: 34px 8px;
 		position: fixed;
 		top: 0px;
+		width: 100vw;
 	}
 
 	.action-sheet {
