@@ -116,7 +116,7 @@
 		box-shadow: 0.5px 0px rgb(60, 60, 67, 0.36);
 		float: left;
 		height: 100vh;
-		overflow-y: scroll;
+		overflow-y: auto;
 		position: sticky;
 		top: 0px;
 		width: 100%;
