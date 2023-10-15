@@ -32,6 +32,11 @@
 		line-height: 22px;
 	}
 
+	.symbol:active,
+	.symbol:focus {
+		opacity: var(--symbol-press-opacity);
+	}
+
 	.separator {
 		background: var(--labels-tertiary);
 		border-radius: 0.5px;
