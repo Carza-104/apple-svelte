@@ -4,6 +4,13 @@
 </main>
 
 <style>
+	* {
+		margin-block-end: 0px;
+		margin-inline-end: 0px;
+		margin-block-start: 0px;
+		margin-inline-start: 0px;
+	}
+
 	main {
 		display: flex;
 		flex-direction: column;
