@@ -123,6 +123,10 @@
 		z-index: 1;
 	}
 
+	aside::-webkit-scrollbar {
+		display: none;
+	}
+
 	@media (max-width: 809px) {
 		aside {
 			backdrop-filter: blur(50px);
