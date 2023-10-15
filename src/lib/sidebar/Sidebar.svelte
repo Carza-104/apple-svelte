@@ -129,7 +129,7 @@
 		z-index: 2;
 	}
 
-	aside::-webkit-scrollbar {
+	#windows::-webkit-scrollbar {
 		display: none;
 	}
 
