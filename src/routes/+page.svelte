@@ -7,6 +7,8 @@
 	main {
 		display: flex;
 		flex-direction: column;
+		font-family: ui-sans-serif, 'SF Pro', Roboto, 'Fira Sans', Oxygen, Ubuntu, 'Segoe UI',
+			'Helvetica Neue', 'Noto Sans', Arial, sans-serif;
 		gap: 24px;
 		padding: 16px;
 	}
