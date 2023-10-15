@@ -160,6 +160,7 @@
 		height: 44px;
 		justify-content: space-between;
 		margin: 0px 16px;
+		white-space: nowrap;
 	}
 
 	label:has(> input:checked) {

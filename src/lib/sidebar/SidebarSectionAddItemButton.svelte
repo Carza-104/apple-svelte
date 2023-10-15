@@ -32,6 +32,7 @@
 		height: 44px;
 		margin: 0px 16px;
 		padding: 0px 8px;
+		white-space: nowrap;
 	}
 
 	.symbol {
