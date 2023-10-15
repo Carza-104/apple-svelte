@@ -54,7 +54,7 @@
 		if (navigator.userAgent.includes('WebKit')) {
 			usesWebKit = true;
 		}
-		if (navigator.userAgent.includes('Windows')) {
+		if (navigator.userAgent.includes('Win')) {
 			elementClass = 'windows';
 		}
 	});
@@ -129,7 +129,7 @@
 		z-index: 2;
 	}
 
-	#windows::-webkit-scrollbar {
+	.windows::-webkit-scrollbar {
 		display: none;
 	}
 
