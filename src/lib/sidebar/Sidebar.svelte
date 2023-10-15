@@ -48,10 +48,14 @@
 	}
 
 	let usesWebKit = false;
+	let elementClass = 'default';
 
 	onMount(() => {
 		if (navigator.userAgent.includes('WebKit')) {
 			usesWebKit = true;
+		}
+		if (navigator.userAgent.includes('Windows')) {
+			elementClass = 'windows';
 		}
 	});
 
@@ -90,6 +94,7 @@
 />
 
 <aside
+	class={elementClass}
 	{id}
 	style="{style}; height: {heightStyle}; max-width: {maxWidthStyle}; transition: max-width 0.25s; -webkit-backdrop-filter: {backdropFilter}"
 >
