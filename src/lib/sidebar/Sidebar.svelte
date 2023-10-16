@@ -47,15 +47,15 @@
 		}
 	}
 
-	let usesWebKit = false;
 	let elementClass = 'default';
+	let usesWebKit = false;
 
 	onMount(() => {
-		if (navigator.userAgent.includes('WebKit')) {
-			usesWebKit = true;
-		}
 		if (navigator.userAgent.includes('Win')) {
 			elementClass = 'windows';
+		}
+		if (navigator.userAgent.includes('WebKit')) {
+			usesWebKit = true;
 		}
 	});
 
@@ -63,7 +63,7 @@
 
 	/* Fix a WebKit issue that causes the backdrop filter to disappear. */
 	$: {
-		if (usesWebKit && state === 'default' && windowWidth <= 809) {
+		if (elementClass === 'default' && usesWebKit && state === 'default' && windowWidth <= 809) {
 			setInterval(() => {
 				backdropFilter = 'unset';
 				setTimeout(() => {
