@@ -1,6 +1,12 @@
+<script>
+	import ListSliderRow from '$lib/list/ListSliderRow.svelte';
+	import '../lib/styles.css';
+</script>
+
 <main>
 	<h1>apple-svelte</h1>
 	<p>UI component library for Svelte based on Apple's Human Interface design language.</p>
+	<ListSliderRow showSymbols />
 </main>
 
 <style>
