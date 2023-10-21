@@ -1,6 +1,6 @@
 {
 	"name": "apple-svelte",
-	"version": "0.4.1",
+	"version": "0.4.2",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -39,6 +39,7 @@
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"type": "module",
+	"author": "Carza-104",
 	"description": "Component library for Svelte based on Apple's Human Interface design language.",
 	"repository": {
 		"type": "git",
