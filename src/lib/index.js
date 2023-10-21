@@ -1,5 +1,8 @@
 export { default as ActionSheet } from './action-sheet/ActionSheet.svelte';
 export { default as ActionSheetButton } from './action-sheet/ActionSheetButton.svelte';
+export { default as Alert } from './alert/Alert.svelte';
+export { default as AlertButton } from './alert/AlertButton.svelte';
+export { default as AlertTextField } from './alert/AlertTextField.svelte';
 export { default as Button } from './button/Button.svelte';
 export { default as Collection } from './collection/Collection.svelte';
 export { default as List } from './list/List.svelte';
@@ -11,6 +14,7 @@ export { default as ListRowDisclosureTrailing } from './list/ListRowDisclosureTr
 export { default as ListRowImage } from './list/ListRowImage.svelte';
 export { default as ListRowStepperTrailing } from './list/ListRowStepperTrailing.svelte';
 export { default as ListRowToggleTrailing } from './list/ListRowToggleTrailing.svelte';
+export { default as ListSliderRow } from './list/ListSliderRow.svelte';
 export { default as ListTextFieldRow } from './list/ListTextFieldRow.svelte';
 export { default as NavigationBar } from './navigation-bar/NavigationBar.svelte';
 export { default as NavigationBarLeading } from './navigation-bar/NavigationBarLeading.svelte';
