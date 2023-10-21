@@ -1,14 +1,6 @@
-<script>
-	import '../lib/styles.css';
-	import RegularProgressIndicator from '$lib/progress-indicator/RegularProgressIndicator.svelte';
-	import SmallProgressIndicator from '$lib/progress-indicator/SmallProgressIndicator.svelte';
-</script>
-
 <main>
 	<h1>apple-svelte</h1>
 	<p>UI component library for Svelte based on Apple's Human Interface design language.</p>
-	<RegularProgressIndicator showLabel />
-	<SmallProgressIndicator showLabel />
 </main>
 
 <style>
