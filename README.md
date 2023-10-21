@@ -29,4 +29,4 @@ Include [Material Symbols](https://fonts.google.com/icons?icon.style=Rounded) or
 
 If the above syntax doesn't work, you can copy the stylesheet and paste it into your project.
 
-To learn how to [customize apple-svelte](https://apple-svelte.vercel.app), check out [the docs](https://apple-svelte.vercel.app).
+To learn how to customize apple-svelte, check out [the docs](https://apple-svelte.vercel.app).
