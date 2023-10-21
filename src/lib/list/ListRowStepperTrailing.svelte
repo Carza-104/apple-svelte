@@ -6,12 +6,32 @@
 	export let onDecrementPress = undefined;
 	export let onIncrementPress = undefined;
 	export let style = undefined;
+
+	let inputElement = undefined;
+
+	function handleDecrementPress() {
+		if (onDecrementPress) {
+			onDecrementPress();
+		}
+		inputElement.blur();
+	}
+
+	function handleIncrementPress() {
+		if (onIncrementPress) {
+			onIncrementPress();
+		}
+		inputElement.blur();
+	}
 </script>
 
 <div {id} class="stepper" {style}>
-	<button class="symbol" on:click={onDecrementPress}>{decrement}</button>
+	<button bind:this={inputElement} class="symbol" on:click={handleDecrementPress}
+		>{decrement}</button
+	>
 	<div class="separator" />
-	<button class="symbol" on:click={onIncrementPress}>{increment}</button>
+	<button bind:this={inputElement} class="symbol" on:click={handleIncrementPress}
+		>{increment}</button
+	>
 </div>
 
 <style>
