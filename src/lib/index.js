@@ -20,6 +20,8 @@ export { default as NavigationBar } from './navigation-bar/NavigationBar.svelte'
 export { default as NavigationBarLeading } from './navigation-bar/NavigationBarLeading.svelte';
 export { default as NavigationBarSearchField } from './navigation-bar/NavigationBarSearchField.svelte';
 export { default as NavigationBarTrailing } from './navigation-bar/NavigationBarTrailing.svelte';
+export { default as RegularProgressIndicator } from './progress-indicator/RegularProgressIndicator.svelte';
+export { default as SmallProgressIndicator } from './progress-indicator/SmallProgressIndicator.svelte';
 export { default as SegmentedControl } from './segmented-control/SegmentedControl.svelte';
 export { default as SegmentedControlButton } from './segmented-control/SegmentedControlButton.svelte';
 export { default as Sidebar } from './sidebar/Sidebar.svelte';
