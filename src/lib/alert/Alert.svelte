@@ -65,18 +65,18 @@
 <style>
 	:root {
 		color-scheme: light dark;
-		--background: rgb(0, 0, 0, 0.4);
+		--alert-background: rgb(0, 0, 0, 0.4);
 	}
 
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--background: rgb(0, 0, 0, 0.6);
+			--alert-background: rgb(0, 0, 0, 0.6);
 		}
 	}
 
 	label {
 		align-items: center;
-		background: var(--background);
+		background: var(--alert-background);
 		cursor: unset;
 		display: flex;
 		height: 100vh;

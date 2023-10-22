@@ -57,7 +57,7 @@
 			colorStyle = 'var(--labels-tertiary)';
 		} else {
 			if (onMaterial) {
-				backgroundStyle = 'var(--background)';
+				backgroundStyle = 'var(--button-background)';
 				colorStyle = 'var(--labels-tertiary)';
 			} else {
 				backgroundStyle = 'var(--fills-tertiary)';
@@ -101,7 +101,7 @@
 		class="symbol-button"
 		{id}
 		on:click={handlePress}
-		style="{style}; --background: {backgroundStyle}; background: {backgroundStyle}; color: {colorStyle}; height: {heightStyle}; width: {widthStyle}"
+		style="{style}; --button-background: {backgroundStyle}; background: {backgroundStyle}; color: {colorStyle}; height: {heightStyle}; width: {widthStyle}"
 	>
 		{#if size === 'large'}
 			<p class="symbol primary">{symbol}</p>
@@ -115,7 +115,7 @@
 		class="text-button"
 		{id}
 		on:click={handlePress}
-		style="{style}; --background: {backgroundStyle}; background: {backgroundStyle}; border-radius: {borderRadiusStyle}; color: {colorStyle}; gap: {gapStyle}; padding: {paddingStyle}"
+		style="{style}; --button-background: {backgroundStyle}; background: {backgroundStyle}; border-radius: {borderRadiusStyle}; color: {colorStyle}; gap: {gapStyle}; padding: {paddingStyle}"
 	>
 		{#if size === 'large'}
 			<p class="body">{label}</p>
@@ -129,7 +129,7 @@
 		class="text-button"
 		{id}
 		on:click={handlePress}
-		style="{style}; --background: {backgroundStyle}; background: {backgroundStyle}; border-radius: {borderRadiusStyle}; color: {colorStyle}; gap: {gapStyle}; padding: {paddingStyle}"
+		style="{style}; --button-background: {backgroundStyle}; background: {backgroundStyle}; border-radius: {borderRadiusStyle}; color: {colorStyle}; gap: {gapStyle}; padding: {paddingStyle}"
 	>
 		{#if size === 'large'}
 			<p class="symbol primary">{symbol}</p>
@@ -144,12 +144,12 @@
 <style>
 	:root {
 		color-scheme: light dark;
-		--background: rgb(255, 255, 255, 0.12);
+		--button-background: rgb(255, 255, 255, 0.12);
 	}
 
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--background: rgb(118, 118, 128, 0.24);
+			--button-background: rgb(118, 118, 128, 0.24);
 		}
 	}
 
@@ -182,6 +182,6 @@
 
 	button:active,
 	button:focus {
-		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)), var(--background) !important;
+		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)), var(--button-background) !important;
 	}
 </style>

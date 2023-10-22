@@ -17,7 +17,7 @@
 		backdropFilterStyle = 'blur(25px)';
 		backgroundBlendModeStyle = 'var(--materials-chrome-background-blend-mode)';
 		backgroundStyle = 'var(--materials-chrome)';
-		borderBottomStyle = '0.33px solid var(--border-bottom)';
+		borderBottomStyle = '0.33px solid var(--navigation-bar-border-bottom)';
 	}
 </script>
 
@@ -49,12 +49,12 @@
 <style>
 	:root {
 		color-scheme: light dark;
-		--border-bottom: rgb(0, 0, 0, 0.3);
+		--navigation-bar-border-bottom: rgb(0, 0, 0, 0.3);
 	}
 
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--border-bottom: rgb(255, 255, 255, 0.15);
+			--navigation-bar-border-bottom: rgb(255, 255, 255, 0.15);
 		}
 	}
 

@@ -15,7 +15,7 @@
 		backdropFilterStyle = 'var(--materials-backdrop-filter)';
 		backgroundStyle = 'var(--materials-chrome)';
 		backgroundBlendModeStyle = 'var(--materials-chrome-background-blend-mode)';
-		boxShadowStyle = '0px 0.33px var(--box-shadow)';
+		boxShadowStyle = '0px 0.33px var(--sidebar-navigation-bar-box-shadow)';
 		marginBottomStyle = '4px';
 	}
 </script>
@@ -39,12 +39,12 @@
 <style>
 	:root {
 		color-scheme: light dark;
-		--box-shadow: rgb(0, 0, 0, 0.3);
+		--sidebar-navigation-bar-box-shadow: rgb(0, 0, 0, 0.3);
 	}
 
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--box-shadow: rgb(255, 255, 255, 0.15);
+			--sidebar-navigation-bar-box-shadow: rgb(255, 255, 255, 0.15);
 		}
 	}
 

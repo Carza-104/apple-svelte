@@ -12,20 +12,20 @@
 <style>
 	:root {
 		color-scheme: light dark;
-		--background: var(--grays-white);
-		--border: rgb(60, 60, 67, 0.29);
+		--alert-text-field-background: var(--grays-white);
+		--alert-text-field-border: rgb(60, 60, 67, 0.29);
 	}
 
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--background: var(--bg-grouped-secondary);
-			--border: rgb(84, 84, 88, 0.65);
+			--alert-text-field-background: var(--bg-grouped-secondary);
+			--alert-text-field-border: rgb(84, 84, 88, 0.65);
 		}
 	}
 
 	input {
-		background: var(--background);
-		border: 0.5px solid var(--border);
+		background: var(--alert-text-field-background);
+		border: 0.5px solid var(--alert-text-field-border);
 		border-radius: 5px;
 		margin-top: 14px;
 		padding: 2px 6px;

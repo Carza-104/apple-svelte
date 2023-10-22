@@ -14,7 +14,7 @@
 		if (state === 'open') {
 			borderBottomStyle = 'unset';
 		} else {
-			borderBottomStyle = '0.33px solid var(--border-bottom)';
+			borderBottomStyle = '0.33px solid var(--sidebar-section-border-bottom)';
 		}
 	}
 
@@ -61,12 +61,12 @@
 <style>
 	:root {
 		color-scheme: light dark;
-		--border-bottom: rgb(60, 60, 67, 0.29);
+		--sidebar-section-border-bottom: rgb(60, 60, 67, 0.29);
 	}
 
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--border-bottom: rgb(84, 84, 88, 0.65);
+			--sidebar-section-border-bottom: rgb(84, 84, 88, 0.65);
 		}
 	}
 
