@@ -82,14 +82,13 @@
 	}
 
 	label {
-		align-items: center;
+		align-items: end;
 		background: var(--action-sheet-background);
 		cursor: unset;
 		display: flex;
 		height: 100vh;
 		justify-content: center;
 		left: 0px;
-		padding: 34px 8px;
 		position: fixed;
 		top: 0px;
 		width: 100vw;
@@ -101,6 +100,7 @@
 		flex: 1;
 		flex-direction: column;
 		gap: 8px;
+		margin: 34px 8px;
 		max-width: 377px;
 	}
 

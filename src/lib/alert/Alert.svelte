@@ -82,7 +82,6 @@
 		height: 100vh;
 		justify-content: center;
 		left: 0px;
-		padding: 34px 8px;
 		position: fixed;
 		top: 0px;
 		width: 100vw;
@@ -98,6 +97,7 @@
 		flex-direction: column;
 		gap: 2px;
 		justify-content: center;
+		margin: 80px 61.5px;
 		max-width: 270px;
 		overflow: hidden;
 		-webkit-backdrop-filter: blur(40px);

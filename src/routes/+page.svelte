@@ -1,4 +1,10 @@
+<script>
+	import '../lib/styles.css';
+	import ActionSheet from "$lib/action-sheet/ActionSheet.svelte";
+</script>
+
 <main>
+	<ActionSheet showCancelButton showDescription showHeader />
 	<h1>apple-svelte</h1>
 	<p>UI component library for Svelte based on Apple's Human Interface design language.</p>
 </main>
