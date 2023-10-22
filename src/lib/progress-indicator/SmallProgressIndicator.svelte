@@ -1,6 +1,6 @@
 <script>
-	import { onMount } from 'svelte';
-
+	export let state = 'default';
+	/* export let state = 'hidden'; */
 	export let showLabel = false;
 	export let label = 'Status…';
 
@@ -8,9 +8,19 @@
 	export let style = undefined;
 
 	let opacityStyle = ['15%', '27%', '39%', '51%', '63%', '75%', '87%', '100%'];
+
+	let displayStyle = 'flex';
+
+	$: {
+		if (state === 'default') {
+			displayStyle = 'flex';
+		} else {
+			displayStyle = 'none';
+		}
+	}
 </script>
 
-<div class="progress-indicator" {id} {style}>
+<div class="progress-indicator" {id} style="{style}; display: {displayStyle}">
 	<div class="spinner">
 		<div class="container">
 			<div class="vertical">
