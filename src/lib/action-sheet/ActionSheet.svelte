@@ -93,6 +93,7 @@
 		position: fixed;
 		top: 0px;
 		width: 100vw;
+		z-index: 3;
 	}
 
 	.action-sheet {
