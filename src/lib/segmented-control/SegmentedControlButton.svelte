@@ -97,8 +97,8 @@
         display: none;
     } */
 
-	label:active,
-	label:focus {
+	label:active > p,
+	label:focus > p {
 		opacity: var(--symbol-press-opacity);
 	}
 
