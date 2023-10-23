@@ -8,13 +8,11 @@
 	export let cancelLabel = 'Cancel';
 
 	export let id = undefined;
-	export let onCancelPress = undefined;
 	export let style = undefined;
 
-	/* function onCancelPress() {
-        let searchField = document.querySelector('input[type="text"]');
-        searchField.value = "";
-    } */
+	function onCancelPress() {
+		value = undefined;
+	}
 
 	let inputElement = undefined;
 
@@ -35,7 +33,7 @@
 			<input bind:value {id} {placeholder} type="text" />
 		{/if}
 		<p class="symbol secondary">{dictationSymbol}</p>
-		<button bind:this={inputElement} class="symbol secondary" on:click={handlePress}
+		<button bind:this={inputElement} class="symbol secondary" on:click={onCancelPress}
 			>{cancelSymbol}</button
 		>
 	</label>
