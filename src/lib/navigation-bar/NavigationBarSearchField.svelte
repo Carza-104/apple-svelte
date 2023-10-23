@@ -15,13 +15,6 @@
 	}
 
 	let inputElement = undefined;
-
-	function handlePress() {
-		if (onCancelPress) {
-			onCancelPress();
-		}
-		inputElement.blur();
-	}
 </script>
 
 <div class="search-field" {style}>
