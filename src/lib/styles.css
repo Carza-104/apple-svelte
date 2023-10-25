@@ -210,6 +210,8 @@ body {
 	font-size: 17px;
 	font-weight: 400;
 	line-height: 22px;
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 button {
@@ -247,6 +249,12 @@ label {
 }
 
 /* Text styles: */
+
+h1,
+p {
+	user-select: text;
+	-webkit-user-select: text;
+}
 
 .large-title {
 	/* font: 400 34px/41px; */
