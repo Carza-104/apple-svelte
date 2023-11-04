@@ -103,16 +103,24 @@
 		opacity: var(--symbol-press-opacity);
 	}
 
+	.button:first-child > label {
+		transform-origin: left;
+	}
+
 	.button:first-child:active > label {
-		transform: scale(0.9581298332) translateX(-5px);
+		transform: scale(0.9581298332) translateX(1.0048840032px);
 	}
 
 	.button:active > label {
 		transform: scale(0.9581298332);
 	}
 
+	.button:last-child > label {
+		transform-origin: right;
+	}
+
 	.button:last-child:active > label {
-		transform: scale(0.9581298332) translateX(5px);
+		transform: scale(0.9581298332) translateX(-1.0048840032px);
 	}
 
 	@media (prefers-color-scheme: dark) {
