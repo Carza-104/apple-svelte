@@ -61,6 +61,7 @@
 		flex: 1;
 		height: 100%;
 		justify-content: center;
+		transition: all 0.25s;
 	}
 
 	label:has(> input:checked) {
@@ -100,6 +101,18 @@
 	label:active > p,
 	label:focus > p {
 		opacity: var(--symbol-press-opacity);
+	}
+
+	.button:first-child:active > label {
+		transform: scale(0.9581298332) translateX(-5px);
+	}
+
+	.button:active > label {
+		transform: scale(0.9581298332);
+	}
+
+	.button:last-child:active > label {
+		transform: scale(0.9581298332) translateX(5px);
 	}
 
 	@media (prefers-color-scheme: dark) {
