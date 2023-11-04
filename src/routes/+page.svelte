@@ -1,4 +1,15 @@
+<script>
+	import SegmentedControl from '$lib/segmented-control/SegmentedControl.svelte';
+	import SegmentedControlButton from '$lib/segmented-control/SegmentedControlButton.svelte';
+	import '../lib/styles.css';
+</script>
+
 <main>
+	<SegmentedControl>
+		<SegmentedControlButton />
+		<SegmentedControlButton />
+		<SegmentedControlButton />
+	</SegmentedControl>
 	<h1>apple-svelte</h1>
 	<p>UI component library for Svelte based on Apple's Human Interface design language.</p>
 </main>

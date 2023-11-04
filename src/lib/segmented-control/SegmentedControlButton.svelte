@@ -108,7 +108,7 @@
 	}
 
 	.button:first-child:active > label {
-		transform: scale(0.9581298332) translateX(1.0048840032px);
+		transform: scale(0.9581298332) translateX(0.5024420016px);
 	}
 
 	.button:active > label {
@@ -120,7 +120,7 @@
 	}
 
 	.button:last-child:active > label {
-		transform: scale(0.9581298332) translateX(-1.0048840032px);
+		transform: scale(0.9581298332) translateX(-0.5024420016px);
 	}
 
 	@media (prefers-color-scheme: dark) {
