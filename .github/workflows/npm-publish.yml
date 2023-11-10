@@ -5,7 +5,7 @@ name: Package
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   build:

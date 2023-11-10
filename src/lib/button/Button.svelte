@@ -182,6 +182,12 @@
 
 	button:active,
 	button:focus {
-		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)), var(--button-background) !important;
+		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
+			var(--button-background) !important;
+		opacity: unset !important;
+	}
+
+	button:hover {
+		opacity: var(--hover-opacity);
 	}
 </style>

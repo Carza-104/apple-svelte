@@ -58,4 +58,8 @@
 	button:focus {
 		opacity: var(--symbol-press-opacity);
 	}
+
+	button:hover {
+		opacity: var(--hover-opacity);
+	}
 </style>

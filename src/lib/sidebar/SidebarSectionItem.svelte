@@ -260,5 +260,10 @@
 	label:active,
 	label:focus {
 		background: var(--press-overlay);
+		opacity: unset !important;
+	}
+
+	label:hover {
+		opacity: var(--hover-opacity);
 	}
 </style>

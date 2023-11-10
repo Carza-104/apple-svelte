@@ -57,6 +57,10 @@
 		opacity: var(--symbol-press-opacity);
 	}
 
+	.symbol:hover {
+		opacity: var(--hover-opacity);
+	}
+
 	.separator {
 		background: var(--labels-tertiary);
 		border-radius: 0.5px;

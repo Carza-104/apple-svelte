@@ -73,4 +73,8 @@
 	input:focus ~ p {
 		opacity: var(--symbol-press-opacity);
 	}
+
+	input:hover {
+		opacity: var(--hover-opacity);
+	}
 </style>
