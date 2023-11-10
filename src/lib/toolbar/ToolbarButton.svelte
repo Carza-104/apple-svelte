@@ -48,7 +48,7 @@
 
 	button:active p,
 	button:focus p {
-		opacity: var(--symbol-press-opacity);
+		opacity: var(--symbol-press-opacity) !important;
 	}
 
 	button:hover {

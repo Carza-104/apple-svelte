@@ -54,7 +54,7 @@
 
 	.symbol:active,
 	.symbol:focus {
-		opacity: var(--symbol-press-opacity);
+		opacity: var(--symbol-press-opacity) !important;
 	}
 
 	.symbol:hover {

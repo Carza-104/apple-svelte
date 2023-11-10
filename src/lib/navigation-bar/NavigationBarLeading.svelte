@@ -56,7 +56,7 @@
 
 	button:active,
 	button:focus {
-		opacity: var(--symbol-press-opacity);
+		opacity: var(--symbol-press-opacity) !important;
 	}
 
 	button:hover {
