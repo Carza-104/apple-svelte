@@ -1,4 +1,8 @@
 <script>
+	/* Behavior prop set to hyperlink lets web crawlers scan the webpage for anchor elements. */
+	export let behavior = 'button';
+	/* export let behavior = 'hyperlink'; */
+	export let hyperlink = undefined;
 	export let inputGroup = 'sidebar-section-item';
 	export let state = 'default';
 	/* export let state = "selected"; */
@@ -87,6 +91,9 @@
 </script>
 
 <label class="item" style="{style}; padding: {paddingStyle}">
+	{#if behavior === 'hyperlink'}
+		<a class="hidden-input" href={hyperlink}>{title}</a>
+	{/if}
 	{#if !showDisclosure}
 		{#if state === 'default'}
 			<input
