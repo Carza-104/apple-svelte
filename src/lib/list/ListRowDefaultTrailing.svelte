@@ -17,23 +17,84 @@
 	export let onCheckmarkPress = undefined;
 	export let onDisclosurePress = undefined;
 	export let style = undefined;
+
+	let detailInputElement = undefined;
+
+	function handleDetailPress() {
+		if (onDetailPress) {
+			onDetailPress();
+		}
+		detailInputElement.blur();
+	}
+
+	let symbolInputElement = undefined;
+
+	function handleSymbolPress() {
+		if (onSymbolPress) {
+			onSymbolPress();
+		}
+		symbolInputElement.blur();
+	}
+
+	let infoInputElement = undefined;
+
+	function handleInfoPress() {
+		if (onInfoPress) {
+			onInfoPress();
+		}
+		infoInputElement.blur();
+	}
+
+	let checkmarkInputElement = undefined;
+
+	function handleCheckmarkPress() {
+		if (onCheckmarkPress) {
+			onCheckmarkPress();
+		}
+		checkmarkInputElement.blur();
+	}
+
+	let disclosureInputElement = undefined;
+
+	function handleDisclosurePress() {
+		if (onDisclosurePress) {
+			onDisclosurePress();
+		}
+		disclosureInputElement.blur();
+	}
 </script>
 
 <div {id} {style}>
 	{#if showDetail}
-		<button class="body" {id} on:click={onDetailPress}>{detail}</button>
+		<button bind:this={detailInputElement} class="body" {id} on:click={handleDetailPress}
+			>{detail}</button
+		>
 	{/if}
 	{#if showSymbol}
-		<button class="symbol primary" {id} on:click={onSymbolPress}>{symbol}</button>
+		<button bind:this={symbolInputElement} class="symbol primary" {id} on:click={handleSymbolPress}
+			>{symbol}</button
+		>
 	{/if}
 	{#if showInfo}
-		<button class="symbol primary" {id} on:click={onInfoPress}>{info}</button>
+		<button bind:this={infoInputElement} class="symbol primary" {id} on:click={handleInfoPress}
+			>{info}</button
+		>
 	{/if}
 	{#if showCheckmark}
-		<button class="symbol secondary" {id} on:click={onCheckmarkPress}>{checkmark}</button>
+		<button
+			bind:this={checkmarkInputElement}
+			class="symbol secondary"
+			{id}
+			on:click={handleCheckmarkPress}>{checkmark}</button
+		>
 	{/if}
 	{#if showDisclosure}
-		<button class="symbol tertiary" {id} on:click={onDisclosurePress}>{disclosure}</button>
+		<button
+			bind:this={disclosureInputElement}
+			class="symbol tertiary"
+			{id}
+			on:click={handleDisclosurePress}>{disclosure}</button
+		>
 	{/if}
 </div>
 
@@ -42,6 +103,15 @@
 		align-items: center;
 		display: flex;
 		gap: 16px;
+	}
+
+	button:active,
+	button:focus {
+		opacity: unset !important;
+	}
+
+	button:hover {
+		opacity: var(--hover-opacity);
 	}
 
 	.body {

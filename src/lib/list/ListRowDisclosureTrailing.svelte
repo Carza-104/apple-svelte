@@ -7,13 +7,33 @@
 	export let onDetailPress = undefined;
 	export let onDisclosurePress = undefined;
 	export let style = undefined;
+
+	let detailInputElement = undefined;
+
+	function handleDetailPress() {
+		if (onDetailPress) {
+			onDetailPress();
+		}
+		detailInputElement.blur();
+	}
+
+	let disclosureInputElement = undefined;
+
+	function handleDisclosurePress() {
+		if (onDisclosurePress) {
+			onDisclosurePress();
+		}
+		disclosureInputElement.blur();
+	}
 </script>
 
 <div {id} {style}>
 	{#if showDetail}
-		<button class="body" on:click={onDetailPress}>{detail}</button>
+		<button bind:this={detailInputElement} class="body" on:click={onDetailPress}>{detail}</button>
 	{/if}
-	<button class="symbol" on:click={onDisclosurePress}>{disclosure}</button>
+	<button bind:this={disclosureInputElement} class="symbol" on:click={onDisclosurePress}
+		>{disclosure}</button
+	>
 </div>
 
 <style>
@@ -21,6 +41,15 @@
 		align-items: center;
 		display: flex;
 		gap: 16px;
+	}
+
+	button:active,
+	button:focus {
+		opacity: unset !important;
+	}
+
+	button:hover {
+		opacity: var(--hover-opacity);
 	}
 
 	.body {

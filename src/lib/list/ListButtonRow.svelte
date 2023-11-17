@@ -62,5 +62,15 @@
 	label:focus {
 		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
 			var(--bg-grouped-secondary);
+		opacity: unset !important;
+	}
+
+	label:active > button,
+	label:focus > button {
+		opacity: unset;
+	}
+
+	button:hover {
+		opacity: var(--hover-opacity);
 	}
 </style>
