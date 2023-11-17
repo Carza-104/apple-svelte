@@ -1,15 +1,4 @@
-<script>
-	import NavigationBar from '$lib/navigation-bar/NavigationBar.svelte';
-	import NavigationBarLeading from '$lib/navigation-bar/NavigationBarLeading.svelte';
-	import NavigationBarTrailing from '$lib/navigation-bar/NavigationBarTrailing.svelte';
-	import '../lib/styles.css';
-</script>
-
 <main>
-	<NavigationBar>
-		<NavigationBarLeading slot="leading" />
-		<NavigationBarTrailing slot="trailing-1" />
-	</NavigationBar>
 	<h1>apple-svelte</h1>
 	<p>UI component library for Svelte based on Apple's Human Interface design language.</p>
 </main>
