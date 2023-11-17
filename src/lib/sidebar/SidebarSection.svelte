@@ -3,18 +3,20 @@
 	export let heading = 'Section 1';
 	export let state = 'open';
 	/* export let state = "closed"; */
-	export let openSymbol = 'keyboard_arrow_down';
-	export let closedSymbol = 'arrow_forward_ios';
+	export let symbol = 'arrow_forward_ios';
 
 	export let id = undefined;
 	export let style = undefined;
 
 	let borderBottomStyle = 'unset';
+	let rotateStyle = '0.5turn';
 	$: {
 		if (state === 'open') {
 			borderBottomStyle = 'unset';
+			rotateStyle = '0.25turn';
 		} else {
 			borderBottomStyle = '0.33px solid var(--sidebar-section-border-bottom)';
+			rotateStyle = 'unset';
 		}
 	}
 
@@ -44,12 +46,13 @@
 	{#if showHeading}
 		<label {id} style="{style}; border-bottom: {borderBottomStyle}">
 			<p>{heading}</p>
-			<button bind:this={inputElement} class="symbol" on:click={handlePress}>
-				{#if state === 'open'}
-					{openSymbol}
-				{:else}
-					{closedSymbol}
-				{/if}
+			<button
+				bind:this={inputElement}
+				class="symbol"
+				on:click={handlePress}
+				style="rotate: {rotateStyle}"
+			>
+				{symbol}
 			</button>
 		</label>
 	{/if}
@@ -88,6 +91,10 @@
 		font-size: 20px;
 		font-weight: 590;
 		line-height: 25px;
+	}
+
+	button {
+		transition: rotate 0.25s;
 	}
 
 	.symbol {
