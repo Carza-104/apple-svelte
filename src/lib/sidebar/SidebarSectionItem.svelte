@@ -25,8 +25,7 @@
 	export let showDisclosure = false;
 	export let disclosureState = 'open';
 	/* export let disclosureState = "closed"; */
-	export let openDisclosure = 'keyboard_arrow_down';
-	export let closedDisclosure = 'arrow_forward_ios';
+	export let disclosure = 'arrow_forward_ios';
 
 	export let id = undefined;
 	export let onPress = undefined;
@@ -48,12 +47,15 @@
 
 	/* Instead of using conditional rendering with {#if} conditions, set the slot's display property to none to retain the state of variables like disclosureState. */
 	let displayStyle = 'unset';
+	let rotateStyle = '0.5turn';
 	$: {
 		if (showDisclosure) {
 			if (disclosureState === 'open') {
 				displayStyle = 'unset';
+				rotateStyle = '0.25turn';
 			} else {
 				displayStyle = 'none';
+				rotateStyle = 'unset';
 			}
 		}
 	}
@@ -138,12 +140,13 @@
 				>{trailingSymbol}</button
 			>
 		{:else if showDisclosure}
-			<button bind:this={inputElement} class="symbol tertiary" on:click={handleDisclosurePress}>
-				{#if disclosureState === 'open'}
-					{openDisclosure}
-				{:else}
-					{closedDisclosure}
-				{/if}
+			<button
+				bind:this={inputElement}
+				class="symbol tertiary"
+				on:click={handleDisclosurePress}
+				style="rotate: {rotateStyle}"
+			>
+				{disclosure}
 			</button>
 		{/if}
 	</div>
@@ -255,6 +258,7 @@
 		font-size: calc(17px * var(--small-symbol-font-size-multiplier));
 		font-weight: calc(590 / var(--small-symbol-font-size-multiplier));
 		line-height: 22px;
+		transition: rotate 0.25s;
 	}
 
 	label:active,
