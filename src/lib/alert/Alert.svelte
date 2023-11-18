@@ -90,12 +90,10 @@
 
 	.alert {
 		backdrop-filter: blur(40px);
-		background: var(--materials-regular);
 		border-radius: 14px;
 		display: flex;
 		flex: 1;
 		flex-direction: column;
-		gap: 2px;
 		justify-content: center;
 		margin: 80px 61.5px;
 		max-width: 270px;
@@ -104,11 +102,12 @@
 	}
 
 	.title-and-description {
+		background: var(--materials-regular);
 		display: flex;
 		flex: 1;
 		flex-direction: column;
 		gap: 2px;
-		padding: 19px 16px 15px;
+		padding: 19px 16px 17px;
 	}
 
 	p {

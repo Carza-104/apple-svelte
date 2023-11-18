@@ -28,6 +28,7 @@
 <style>
 	label {
 		align-items: center;
+		background: var(--materials-regular);
 		border-top: 0.33px solid var(--separators-non-opaque);
 		display: flex;
 		height: 44px;
@@ -45,7 +46,7 @@
 		opacity: unset !important;
 	}
 
-	button:hover {
+	label:hover {
 		opacity: var(--hover-opacity);
 	}
 </style>
