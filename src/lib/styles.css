@@ -196,16 +196,15 @@ a {
 	text-decoration: none;
 }
 
-a:active {
-	opacity: var(--symbol-press-opacity) !important;
-}
-
+a:active,
 a:focus {
 	opacity: var(--symbol-press-opacity) !important;
+	text-decoration: underline;
 }
 
 a:hover {
 	opacity: var(--hover-opacity);
+	text-decoration: underline;
 }
 
 body {
