@@ -26,6 +26,7 @@
 			{id}
 			name={inputGroup}
 			on:click={handlePress}
+			tabindex="0"
 			type="radio"
 		/>
 	{:else}
@@ -35,6 +36,7 @@
 			{id}
 			name={inputGroup}
 			on:click={handlePress}
+			tabindex="0"
 			type="radio"
 		/>
 	{/if}
