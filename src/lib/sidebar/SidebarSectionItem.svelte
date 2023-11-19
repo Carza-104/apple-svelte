@@ -95,6 +95,7 @@
 				{id}
 				name={inputGroup}
 				on:click={handlePress}
+				tabindex="0"
 				type="radio"
 			/>
 		{:else}
@@ -105,6 +106,7 @@
 				{id}
 				name={inputGroup}
 				on:click={handlePress}
+				tabindex="0"
 				type="radio"
 			/>
 		{/if}
@@ -136,8 +138,11 @@
 			<p class="detail">{detail}</p>
 		{/if}
 		{#if showTrailingSymbol}
-			<button bind:this={inputElement} class="symbol secondary" on:click={handleTrailingSymbolPress}
-				>{trailingSymbol}</button
+			<button
+				bind:this={inputElement}
+				class="symbol secondary"
+				on:click={handleTrailingSymbolPress}
+				tabindex="0">{trailingSymbol}</button
 			>
 		{:else if showDisclosure}
 			<button
@@ -145,6 +150,7 @@
 				class="symbol tertiary"
 				on:click={handleDisclosurePress}
 				style="rotate: {rotateStyle}"
+				tabindex="0"
 			>
 				{disclosure}
 			</button>
@@ -270,11 +276,26 @@
 		opacity: var(--symbol-press-opacity) !important;
 	}
 
-	label:focus {
+	label:has(input:focus) {
 		background: var(--colors-accent-2);
 	}
 
+	/* label:has(button:focus) {
+		background: var(--colors-accent-2);
+	} */
+
 	label:hover {
 		opacity: var(--hover-opacity);
+	}
+
+	button:active {
+		background: unset !important;
+		outline: unset !important;
+	}
+
+	button:focus {
+		background: var(--colors-accent-2);
+		border-radius: 5px;
+		outline: 4px solid var(--colors-accent-2);
 	}
 </style>
