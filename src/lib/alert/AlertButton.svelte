@@ -19,9 +19,13 @@
 
 <label {id} {style}>
 	{#if state === 'default'}
-		<button bind:this={inputElement} class="body" on:click={handlePress}>{label}</button>
+		<button bind:this={inputElement} class="body" on:click={handlePress} tabindex="0"
+			>{label}</button
+		>
 	{:else}
-		<button bind:this={inputElement} class="body-emphasized" on:click={handlePress}>{label}</button>
+		<button bind:this={inputElement} class="body-emphasized" on:click={handlePress} tabindex="0"
+			>{label}</button
+		>
 	{/if}
 </label>
 
@@ -36,7 +40,7 @@
 	}
 
 	label:last-child {
-		border-bottom: 14px;
+		border-radius: 0px 0px 14px 14px;
 	}
 
 	button {
