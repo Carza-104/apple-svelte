@@ -261,10 +261,13 @@
 		transition: rotate 0.25s;
 	}
 
-	label:active,
-	label:focus {
-		background: var(--press-overlay);
+	label:active {
+		background: var(--press-overlay) !important;
 		opacity: unset !important;
+	}
+
+	label:focus {
+		background: var(--colors-accent-2);
 	}
 
 	label:hover {

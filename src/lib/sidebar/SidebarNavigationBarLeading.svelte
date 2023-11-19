@@ -78,9 +78,16 @@
 		line-height: 22px;
 	}
 
-	button:active,
-	button:focus {
+	button:active {
+		background: unset !important;
 		opacity: var(--symbol-press-opacity) !important;
+		outline: unset !important;
+	}
+
+	button:focus {
+		background: var(--colors-accent-2);
+		border-radius: 5px;
+		outline: var(--colors-accent-2) solid 4px;
 	}
 
 	button:hover {

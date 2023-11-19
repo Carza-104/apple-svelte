@@ -56,10 +56,13 @@
 		line-height: 19px;
 	}
 
-	label:active,
+	label:active {
+		background: unset !important;
+		opacity: var(--symbol-press-opacity) !important;
+	}
+
 	label:focus {
-		background: var(--press-overlay);
-		opacity: unset !important;
+		background: var(--colors-accent-2);
 	}
 
 	label:hover {
