@@ -48,11 +48,19 @@
 		width: 100%;
 	}
 
-	button:active,
-	button:focus {
+	button:last-child {
+		border-radius: 0px 0px 14px 14px;
+	}
+
+	button:active {
 		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
 			var(--materials-regular);
+		border: unset !important;
 		opacity: unset !important;
+	}
+
+	button:focus {
+		border: 4px solid var(--colors-accent-2);
 	}
 
 	button:hover {
