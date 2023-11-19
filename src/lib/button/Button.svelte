@@ -180,11 +180,15 @@
 		line-height: 20px;
 	}
 
-	button:active,
-	button:focus {
+	button:active {
 		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
 			var(--button-background) !important;
 		opacity: unset !important;
+		outline: unset !important;
+	}
+
+	button:focus {
+		outline: 4px solid var(--colors-accent-2);
 	}
 
 	button:hover {

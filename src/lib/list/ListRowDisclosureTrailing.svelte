@@ -43,9 +43,16 @@
 		gap: 16px;
 	}
 
-	button:active,
-	button:focus {
+	button:active {
+		background: unset !important;
 		opacity: unset !important;
+		outline: unset !important;
+	}
+
+	button:focus {
+		background: var(--colors-accent-2);
+		border-radius: 5px;
+		outline: 4px solid var(--colors-accent-2);
 	}
 
 	button:hover {

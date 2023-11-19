@@ -98,9 +98,16 @@
         display: none;
     } */
 
-	label:active > p,
-	label:focus > p {
+	label:active > p {
 		opacity: var(--symbol-press-opacity);
+	}
+
+	label:active {
+		background: unset !important;
+	}
+
+	label:focus {
+		background: var(--colors-accent-2);
 	}
 
 	.button:first-child > label {

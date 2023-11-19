@@ -75,4 +75,9 @@
 		transition: margin 0.25s;
 		width: 27px;
 	}
+
+	input:focus + div {
+		background: linear-gradient(var(--colors-accent-2) 0%, var(--colors-accent-2)),
+			var(--grays-white);
+	}
 </style>

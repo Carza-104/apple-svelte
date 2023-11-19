@@ -49,7 +49,7 @@
 	}
 
 	button:last-child {
-		border-radius: 0px 0px 14px 14px;
+		border-bottom: 14px;
 	}
 
 	button:active {

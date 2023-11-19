@@ -69,9 +69,19 @@
 		font-weight: 510;
 	}
 
-	input:active ~ p,
-	input:focus ~ p {
+	input:active ~ p {
 		opacity: var(--symbol-press-opacity) !important;
+	}
+
+	input:active ~ .symbol {
+		background: unset !important;
+		outline: unset !important;
+	}
+
+	input:focus ~ .symbol {
+		background: var(--colors-accent-2);
+		border-radius: 5px;
+		outline: 4px solid var(--colors-accent-2);
 	}
 
 	input:hover {

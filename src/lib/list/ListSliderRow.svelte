@@ -96,4 +96,10 @@
 	label:last-child > div {
 		border-bottom: unset;
 	}
+
+	input[type='range']:focus::-moz-range-thumb,
+	input[type='range']:focus::-webkit-slider-thumb {
+		background: linear-gradient(var(--colors-accent-2) 0%, var(--colors-accent-2)),
+			var(--grays-white);
+	}
 </style>

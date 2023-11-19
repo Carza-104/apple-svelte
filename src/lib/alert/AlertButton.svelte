@@ -35,15 +35,24 @@
 		justify-content: center;
 	}
 
+	label:last-child {
+		border-bottom: 14px;
+	}
+
 	button {
 		color: var(--colors-accent);
 	}
 
-	label:active,
-	label:focus {
+	label:active {
 		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
 			var(--materials-regular);
 		opacity: unset !important;
+		outline: unset !important;
+	}
+
+	label:focus {
+		outline: 4px solid var(--colors-accent-2);
+		outline-offset: -4px;
 	}
 
 	label:hover {

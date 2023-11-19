@@ -35,4 +35,8 @@
 	input::placeholder {
 		color: var(--labels-tertiary);
 	}
+
+	input:focus {
+		background: var(--alert-text-field-background);
+	}
 </style>

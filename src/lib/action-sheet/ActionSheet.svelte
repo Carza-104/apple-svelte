@@ -109,10 +109,6 @@
 		overflow: hidden;
 	}
 
-	.buttons :first-child {
-		border-top: unset;
-	}
-
 	.header {
 		align-items: center;
 		backdrop-filter: blur(40px);

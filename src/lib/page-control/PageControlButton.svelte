@@ -52,4 +52,8 @@
 	label:has(> input:checked) {
 		opacity: unset;
 	}
+
+	label:has(> input:focus) {
+		outline: 4px solid var(--colors-accent-2);
+	}
 </style>

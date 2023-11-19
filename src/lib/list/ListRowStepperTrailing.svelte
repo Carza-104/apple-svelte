@@ -42,19 +42,29 @@
 		display: flex;
 		height: 32px;
 		justify-content: space-evenly;
+		overflow: hidden;
 		width: 94px;
 	}
 
 	.symbol {
+		align-items: center;
 		color: var(--labels-primary);
+		display: flex;
 		font-size: calc(17px * var(--medium-symbol-font-size-multiplier));
 		font-weight: calc(400 / var(--medium-symbol-font-size-multiplier));
+		height: 100%;
+		justify-content: center;
 		line-height: 22px;
+		width: 100%;
 	}
 
-	.symbol:active,
-	.symbol:focus {
+	.symbol:active {
+		background: unset !important;
 		opacity: var(--symbol-press-opacity) !important;
+	}
+
+	.symbol:focus {
+		background: var(--colors-accent-2);
 	}
 
 	.symbol:hover {

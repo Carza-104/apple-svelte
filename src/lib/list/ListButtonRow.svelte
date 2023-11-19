@@ -58,11 +58,14 @@
 		border-bottom: unset;
 	}
 
-	label:active,
-	label:focus {
+	label:active {
 		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
-			var(--bg-grouped-secondary);
+			var(--bg-grouped-secondary) !important;
 		opacity: unset !important;
+	}
+
+	label:focus {
+		background: var(--colors-accent-2);
 	}
 
 	label:active > button,
