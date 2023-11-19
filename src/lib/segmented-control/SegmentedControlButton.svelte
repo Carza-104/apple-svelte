@@ -27,6 +27,7 @@
 				{id}
 				name={inputGroup}
 				on:click={handlePress}
+				tabindex="0"
 				type="radio"
 			/>
 		{:else}
@@ -37,6 +38,7 @@
 				{id}
 				name={inputGroup}
 				on:click={handlePress}
+				tabindex="0"
 				type="radio"
 			/>
 		{/if}
@@ -61,7 +63,7 @@
 		flex: 1;
 		height: 100%;
 		justify-content: center;
-		transition: all 0.25s;
+		transition: transform 0.25s;
 	}
 
 	label:has(> input:checked) {
@@ -98,15 +100,23 @@
         display: none;
     } */
 
+	input:not(:checked):hover + p {
+		opacity: var(--hover-opacity);
+	}
+
 	label:active > p {
 		opacity: var(--symbol-press-opacity);
+	}
+
+	label:active:has(input:checked) {
+		background: var(--grays-white) !important;
 	}
 
 	label:active {
 		background: unset !important;
 	}
 
-	label:focus {
+	label:has(input:focus) {
 		background: var(--colors-accent-2);
 	}
 
