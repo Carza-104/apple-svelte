@@ -261,9 +261,13 @@
 		transition: rotate 0.25s;
 	}
 
-	label:active {
+	label:active:has(input) {
 		background: var(--press-overlay) !important;
 		opacity: unset !important;
+	}
+
+	label:active {
+		opacity: var(--symbol-press-opacity) !important;
 	}
 
 	label:focus {
