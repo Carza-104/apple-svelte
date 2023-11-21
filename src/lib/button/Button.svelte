@@ -188,7 +188,7 @@
 	}
 
 	button:focus {
-		outline: 4px solid var(--colors-accent-2);
+		outline: 2px solid var(--colors-accent);
 	}
 
 	button:hover {

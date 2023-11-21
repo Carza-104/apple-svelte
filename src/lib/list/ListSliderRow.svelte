@@ -8,6 +8,12 @@
 
 	export let id = undefined;
 	export let style = undefined;
+
+	let inputElement = undefined;
+
+	function handlePress() {
+		inputElement.blur();
+	}
 </script>
 
 <label {style}>
@@ -15,7 +21,16 @@
 		{#if showSymbols}
 			<p class="symbol">{minSymbol}</p>
 		{/if}
-		<input bind:value class="body" {id} {max} {min} type="range" />
+		<input
+			bind:this={inputElement}
+			bind:value
+			class="body"
+			{id}
+			{max}
+			{min}
+			on:click={handlePress}
+			type="range"
+		/>
 		{#if showSymbols}
 			<p class="symbol">{maxSymbol}</p>
 		{/if}
@@ -97,9 +112,17 @@
 		border-bottom: unset;
 	}
 
+	input[type='range']:active::-moz-range-thumb,
+	input[type='range']:active::-webkit-slider-thumb {
+		background: var(--grays-white) !important;
+		outline: unset !important;
+	}
+
 	input[type='range']:focus::-moz-range-thumb,
 	input[type='range']:focus::-webkit-slider-thumb {
 		background: linear-gradient(var(--colors-accent-2) 0%, var(--colors-accent-2)),
 			var(--grays-white);
+		outline: 2px solid var(--colors-accent);
+		outline-offset: -2px;
 	}
 </style>

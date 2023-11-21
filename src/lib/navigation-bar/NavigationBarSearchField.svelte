@@ -10,11 +10,12 @@
 	export let id = undefined;
 	export let style = undefined;
 
-	function onCancelPress() {
-		value = undefined;
-	}
-
 	let inputElement = undefined;
+
+	function handleCancelPress() {
+		value = undefined;
+		inputElement.blur();
+	}
 </script>
 
 <div class="search-field" {style}>
@@ -26,11 +27,9 @@
 			<input bind:value {id} {placeholder} type="text" />
 		{/if}
 		<p class="symbol secondary">{dictationSymbol}</p>
-		<button bind:this={inputElement} class="symbol secondary" on:click={onCancelPress}
-			>{cancelSymbol}</button
-		>
+		<button class="symbol secondary" on:click={handleCancelPress}>{cancelSymbol}</button>
 	</label>
-	<button class="label" on:click={onCancelPress}>{cancelLabel}</button>
+	<button bind:this={inputElement} class="label" on:click={handleCancelPress}>{cancelLabel}</button>
 </div>
 
 <style>
@@ -98,15 +97,14 @@
 	}
 
 	button:active {
-		background: unset !important;
 		opacity: var(--symbol-press-opacity) !important;
 		outline: unset !important;
 	}
 
 	button:focus {
-		background: var(--colors-accent-2);
 		border-radius: 5px;
-		outline: 4px solid var(--colors-accent-2);
+		outline: 2px solid var(--colors-accent);
+		outline-offset: 4px;
 	}
 
 	.symbol:hover {

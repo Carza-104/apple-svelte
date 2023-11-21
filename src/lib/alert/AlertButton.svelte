@@ -55,8 +55,8 @@
 	}
 
 	label:focus {
-		outline: 4px solid var(--colors-accent-2);
-		outline-offset: -4px;
+		outline: 2px solid var(--colors-accent);
+		outline-offset: -2px;
 	}
 
 	label:hover {

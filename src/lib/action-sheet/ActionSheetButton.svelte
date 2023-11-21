@@ -60,7 +60,7 @@
 	}
 
 	button:focus {
-		border: 4px solid var(--colors-accent-2);
+		border: 2px solid var(--colors-accent);
 	}
 
 	button:hover {

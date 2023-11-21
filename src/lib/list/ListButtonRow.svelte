@@ -64,13 +64,15 @@
 		opacity: unset !important;
 	}
 
-	label:focus {
-		background: var(--colors-accent-2);
+	button:active {
+		opacity: unset;
+		outline: unset !important;
 	}
 
-	label:active > button,
-	label:focus > button {
-		opacity: unset;
+	button:focus {
+		border-radius: 10px;
+		outline: 2px solid var(--colors-accent);
+		outline-offset: -2px;
 	}
 
 	button:hover {

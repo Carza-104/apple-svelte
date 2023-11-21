@@ -29,9 +29,11 @@
 
 <div {id} {style}>
 	{#if showDetail}
-		<button bind:this={detailInputElement} class="body" on:click={onDetailPress}>{detail}</button>
+		<button bind:this={detailInputElement} class="body" on:click={handleDetailPress}
+			>{detail}</button
+		>
 	{/if}
-	<button bind:this={disclosureInputElement} class="symbol" on:click={onDisclosurePress}
+	<button bind:this={disclosureInputElement} class="symbol" on:click={handleDisclosurePress}
 		>{disclosure}</button
 	>
 </div>
@@ -44,15 +46,14 @@
 	}
 
 	button:active {
-		background: unset !important;
 		opacity: unset !important;
 		outline: unset !important;
 	}
 
 	button:focus {
-		background: var(--colors-accent-2);
 		border-radius: 5px;
-		outline: 4px solid var(--colors-accent-2);
+		outline: 2px solid var(--colors-accent);
+		outline-offset: 4px;
 	}
 
 	button:hover {

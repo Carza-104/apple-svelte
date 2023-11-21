@@ -56,13 +56,15 @@
 		line-height: 19px;
 	}
 
-	label:active {
+	button:active {
 		background: unset !important;
 		opacity: var(--symbol-press-opacity) !important;
+		outline: unset !important;
 	}
 
-	label:focus {
-		background: var(--colors-accent-2);
+	button:focus {
+		outline: 2px solid var(--colors-accent);
+		outline-offset: 4px;
 	}
 
 	label:hover {

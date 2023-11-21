@@ -55,7 +55,11 @@
 		opacity: unset;
 	}
 
+	label:has(> input:active) {
+		outline: unset !important;
+	}
+
 	label:has(> input:focus) {
-		outline: 4px solid var(--colors-accent-2);
+		outline: 2px solid var(--colors-accent);
 	}
 </style>

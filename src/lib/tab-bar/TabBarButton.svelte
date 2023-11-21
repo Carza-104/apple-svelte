@@ -28,7 +28,6 @@
 			{id}
 			name={inputGroup}
 			on:click={handlePress}
-			tabindex="0"
 			type="radio"
 		/>
 	{:else}
@@ -38,7 +37,6 @@
 			{id}
 			name={inputGroup}
 			on:click={handlePress}
-			tabindex="0"
 			type="radio"
 		/>
 	{/if}
@@ -76,14 +74,13 @@
 	}
 
 	input:active ~ .symbol {
-		background: unset !important;
 		outline: unset !important;
 	}
 
 	input:focus ~ .symbol {
-		background: var(--colors-accent-2);
 		border-radius: 5px;
-		outline: 4px solid var(--colors-accent-2);
+		outline: 2px solid var(--colors-accent);
+		outline-offset: 2px;
 	}
 
 	input:hover {

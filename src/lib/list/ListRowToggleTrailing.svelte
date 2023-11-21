@@ -76,8 +76,15 @@
 		width: 27px;
 	}
 
+	input:active + div {
+		background: var(--grays-white) !important;
+		outline: unset !important;
+	}
+
 	input:focus + div {
 		background: linear-gradient(var(--colors-accent-2) 0%, var(--colors-accent-2)),
 			var(--grays-white);
+		outline: 2px solid var(--colors-accent);
+		outline-offset: -2px;
 	}
 </style>

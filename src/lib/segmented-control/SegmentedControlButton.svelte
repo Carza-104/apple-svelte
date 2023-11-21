@@ -27,7 +27,6 @@
 				{id}
 				name={inputGroup}
 				on:click={handlePress}
-				tabindex="0"
 				type="radio"
 			/>
 		{:else}
@@ -38,7 +37,6 @@
 				{id}
 				name={inputGroup}
 				on:click={handlePress}
-				tabindex="0"
 				type="radio"
 			/>
 		{/if}
@@ -114,10 +112,24 @@
 
 	label:active {
 		background: unset !important;
+		outline: unset !important;
+	}
+
+	label:has(input:active) {
+		background: var(--grays-white) !important;
+		outline: unset !important;
 	}
 
 	label:has(input:focus) {
-		background: var(--colors-accent-2);
+		outline: 2px solid var(--colors-accent);
+	}
+
+	label:has(input:active) {
+		background: unset !important;
+	}
+
+	label:has(input:checked:active) {
+		background: var(--grays-white) !important;
 	}
 
 	.button:first-child > label {

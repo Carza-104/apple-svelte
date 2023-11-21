@@ -7,29 +7,31 @@
 	export let onIncrementPress = undefined;
 	export let style = undefined;
 
-	let inputElement = undefined;
+	let decrementInputElement = undefined;
 
 	function handleDecrementPress() {
 		if (onDecrementPress) {
 			onDecrementPress();
 		}
-		inputElement.blur();
+		decrementInputElement.blur();
 	}
+
+	let incrementInputElement = undefined;
 
 	function handleIncrementPress() {
 		if (onIncrementPress) {
 			onIncrementPress();
 		}
-		inputElement.blur();
+		incrementInputElement.blur();
 	}
 </script>
 
 <div {id} class="stepper" {style}>
-	<button bind:this={inputElement} class="symbol" on:click={handleDecrementPress}
+	<button bind:this={decrementInputElement} class="symbol" on:click={handleDecrementPress}
 		>{decrement}</button
 	>
 	<div class="separator" />
-	<button bind:this={inputElement} class="symbol" on:click={handleIncrementPress}
+	<button bind:this={incrementInputElement} class="symbol" on:click={handleIncrementPress}
 		>{increment}</button
 	>
 </div>
@@ -59,12 +61,14 @@
 	}
 
 	.symbol:active {
-		background: unset !important;
 		opacity: var(--symbol-press-opacity) !important;
+		outline: unset !important;
 	}
 
 	.symbol:focus {
-		background: var(--colors-accent-2);
+		border-radius: 8px;
+		outline: 2px solid var(--colors-accent);
+		outline-offset: -2px;
 	}
 
 	.symbol:hover {

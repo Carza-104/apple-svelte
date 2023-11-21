@@ -268,8 +268,8 @@
 	}
 
 	label:active:has(input) {
-		background: var(--press-overlay) !important;
 		opacity: unset !important;
+		outline: unset !important;
 	}
 
 	label:active {
@@ -277,7 +277,8 @@
 	}
 
 	label:has(input:focus) {
-		background: var(--colors-accent-2);
+		outline: 2px solid var(--colors-accent);
+		outline-offset: -2px;
 	}
 
 	/* label:has(button:focus) {
@@ -289,13 +290,12 @@
 	}
 
 	button:active {
-		background: unset !important;
 		outline: unset !important;
 	}
 
 	button:focus {
-		background: var(--colors-accent-2);
 		border-radius: 5px;
-		outline: 4px solid var(--colors-accent-2);
+		outline: 2px solid var(--colors-accent);
+		outline-offset: 4px;
 	}
 </style>
