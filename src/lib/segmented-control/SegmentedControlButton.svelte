@@ -158,5 +158,18 @@
 			border: unset;
 			box-shadow: unset;
 		}
+
+		label:active:has(input:checked) {
+			background: #636366 !important;
+		}
+
+		label:has(input:active) {
+			background: #636366 !important;
+			outline: unset !important;
+		}
+
+		label:has(input:checked:active) {
+			background: #636366 !important;
+		}
 	}
 </style>
