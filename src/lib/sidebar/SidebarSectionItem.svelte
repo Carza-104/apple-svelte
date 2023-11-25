@@ -1,4 +1,7 @@
 <script>
+	export let behavior = 'default';
+	/* export let behavior = 'hyperlink'; */
+	export let href = '/';
 	export let inputGroup = 'sidebar-section-item';
 	export let state = 'default';
 	/* export let state = "selected"; */
@@ -66,6 +69,13 @@
 		if (onPress) {
 			onPress();
 		}
+		if (behavior === 'hyperlink') {
+			let anchor = document.createElement('a');
+			anchor.href = href;
+			anchor.classList.add('hidden-input');
+			document.body.appendChild(anchor);
+			anchor.click();
+		}
 		inputElement.blur();
 	}
 
@@ -95,7 +105,6 @@
 				{id}
 				name={inputGroup}
 				on:click={handlePress}
-				tabindex="0"
 				type="radio"
 			/>
 		{:else}
@@ -106,7 +115,6 @@
 				{id}
 				name={inputGroup}
 				on:click={handlePress}
-				tabindex="0"
 				type="radio"
 			/>
 		{/if}
@@ -138,11 +146,8 @@
 			<p class="detail">{detail}</p>
 		{/if}
 		{#if showTrailingSymbol}
-			<button
-				bind:this={inputElement}
-				class="symbol secondary"
-				on:click={handleTrailingSymbolPress}
-				tabindex="0">{trailingSymbol}</button
+			<button bind:this={inputElement} class="symbol secondary" on:click={handleTrailingSymbolPress}
+				>{trailingSymbol}</button
 			>
 		{:else if showDisclosure}
 			<button
@@ -150,7 +155,6 @@
 				class="symbol tertiary"
 				on:click={handleDisclosurePress}
 				style="rotate: {rotateStyle}"
-				tabindex="0"
 			>
 				{disclosure}
 			</button>
