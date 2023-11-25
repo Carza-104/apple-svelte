@@ -1,4 +1,4 @@
-# This workflow will format code with Prettier, generate a dist directory with svelte-package, and publish it to npm when changes are pushed to GitHub.
+# This workflow will use Prettier to format code, generate a dist directory with svelte-package, and publish it to npm when changes are pushed to GitHub.
 
 name: Package
 
