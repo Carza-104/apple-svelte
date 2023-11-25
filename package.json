@@ -1,6 +1,6 @@
 {
 	"name": "apple-svelte",
-	"version": "1.0.22",
+	"version": "1.0.23",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
