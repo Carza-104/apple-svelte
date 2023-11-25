@@ -121,7 +121,7 @@
 	}
 
 	label:has(input:focus) {
-		outline: 2px solid var(--colors-accent);
+		outline: 1.5px solid var(--colors-accent);
 	}
 
 	label:has(input:active) {
