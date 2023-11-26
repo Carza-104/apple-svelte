@@ -1,4 +1,7 @@
 <script>
+	export let behavior = 'default';
+	/* export let behavior = 'hyperlink'; */
+	export let href = '/';
 	export let inputGroup = 'tab-bar-button';
 	export let state = 'default';
 	/* export let state = "selected"; */
@@ -14,6 +17,13 @@
 	function handlePress() {
 		if (onPress) {
 			onPress();
+		}
+		if (behavior === 'hyperlink') {
+			let anchor = document.createElement('a');
+			anchor.href = href;
+			anchor.classList.add('hidden-input');
+			document.body.appendChild(anchor);
+			anchor.click();
 		}
 		inputElement.blur();
 	}
