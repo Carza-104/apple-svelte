@@ -50,8 +50,10 @@
 			type="radio"
 		/>
 	{/if}
-	<p class="symbol">{symbol}</p>
-	<p class="label">{label}</p>
+	<div>
+		<p class="symbol">{symbol}</p>
+		<p class="label">{label}</p>
+	</div>
 </label>
 
 <style>
@@ -60,10 +62,28 @@
 		display: flex;
 		flex-direction: column;
 		gap: 7px;
+		width: 100%;
+	}
+
+	label:first-child {
+		align-items: start;
+		width: calc(24px + 50%);
+	}
+
+	label:last-child {
+		align-items: end;
+		width: calc(24px + 50%);
+	}
+
+	div {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		gap: 7px;
 		width: 48px;
 	}
 
-	input:checked ~ p {
+	input:checked ~ div > p {
 		color: var(--colors-accent);
 	}
 
@@ -79,21 +99,21 @@
 		font-weight: 510;
 	}
 
-	input:active ~ p {
+	input:active ~ div > p {
 		opacity: var(--symbol-press-opacity) !important;
 	}
 
-	input:active ~ .symbol {
+	input:active ~ div > .symbol {
 		outline: unset !important;
 	}
 
-	input:focus ~ .symbol {
+	input:focus ~ div > .symbol {
 		border-radius: 5px;
 		outline: 2px solid var(--colors-accent);
 		outline-offset: 2px;
 	}
 
-	input:hover {
+	label:hover {
 		opacity: var(--hover-opacity);
 	}
 </style>
