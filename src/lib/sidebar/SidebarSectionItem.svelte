@@ -97,7 +97,8 @@
 </script>
 
 <label class="item" style="{style}; padding: {paddingStyle}">
-	{#if !showDisclosure}
+	<!-- Make sure the item doesn't stay selected if it redirects the user to another website. -->
+	{#if (behavior === 'hyperlink' && !href.includes('http://') && !href.includes('https://')) || !showDisclosure}
 		{#if state === 'default'}
 			<input
 				bind:this={inputElement}
