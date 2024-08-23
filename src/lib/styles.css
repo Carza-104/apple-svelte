@@ -258,6 +258,7 @@ label {
 h1,
 p {
 	user-select: text;
+	text-size-adjust: none;
 	-webkit-user-select: text;
 }
 
@@ -266,6 +267,7 @@ p {
 	font-size: 34px;
 	font-weight: 400;
 	line-height: 41px;
+	text-size-adjust: none;
 }
 
 .large-title-emphasized {
@@ -273,6 +275,7 @@ p {
 	font-size: 34px;
 	font-weight: 700;
 	line-height: 41px;
+	text-size-adjust: none;
 }
 
 .title1 {
@@ -280,6 +283,7 @@ p {
 	font-size: 28px;
 	font-weight: 400;
 	line-height: 34px;
+	text-size-adjust: none;
 }
 
 .title1-emphasized {
@@ -287,6 +291,7 @@ p {
 	font-size: 28px;
 	font-weight: 700;
 	line-height: 34px;
+	text-size-adjust: none;
 }
 
 .title2 {
@@ -294,6 +299,7 @@ p {
 	font-size: 22px;
 	font-weight: 400;
 	line-height: 28px;
+	text-size-adjust: none;
 }
 
 .title2-emphasized {
@@ -301,6 +307,7 @@ p {
 	font-size: 22px;
 	font-weight: 700;
 	line-height: 28px;
+	text-size-adjust: none;
 }
 
 .title3 {
@@ -308,6 +315,7 @@ p {
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 25px;
+	text-size-adjust: none;
 }
 
 .title3-emphasized {
@@ -315,6 +323,7 @@ p {
 	font-size: 20px;
 	font-weight: 590;
 	line-height: 25px;
+	text-size-adjust: none;
 }
 
 .headline {
@@ -322,6 +331,7 @@ p {
 	font-size: 17px;
 	font-weight: 590;
 	line-height: 22px;
+	text-size-adjust: none;
 }
 
 .headline-italic {
@@ -330,6 +340,7 @@ p {
 	font-style: italic;
 	font-weight: 590;
 	line-height: 22px;
+	text-size-adjust: none;
 }
 
 .body {
@@ -337,6 +348,7 @@ p {
 	font-size: 17px;
 	font-weight: 400;
 	line-height: 22px;
+	text-size-adjust: none;
 }
 
 .body-emphasized {
@@ -344,6 +356,7 @@ p {
 	font-size: 17px;
 	font-weight: 590;
 	line-height: 22px;
+	text-size-adjust: none;
 }
 
 .body-italic {
@@ -352,6 +365,7 @@ p {
 	font-style: italic;
 	font-weight: 400;
 	line-height: 22px;
+	text-size-adjust: none;
 }
 
 .body-emphasized-italic {
@@ -360,6 +374,7 @@ p {
 	font-style: italic;
 	font-weight: 590;
 	line-height: 22px;
+	text-size-adjust: none;
 }
 
 .callout {
@@ -367,6 +382,7 @@ p {
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 21px;
+	text-size-adjust: none;
 }
 
 .callout-emphasized {
@@ -374,6 +390,7 @@ p {
 	font-size: 16px;
 	font-weight: 590;
 	line-height: 21px;
+	text-size-adjust: none;
 }
 
 .callout-italic {
@@ -382,6 +399,7 @@ p {
 	font-style: italic;
 	font-weight: 400;
 	line-height: 21px;
+	text-size-adjust: none;
 }
 
 .callout--emphasized-italic {
@@ -390,6 +408,7 @@ p {
 	font-style: italic;
 	font-weight: 590;
 	line-height: 21px;
+	text-size-adjust: none;
 }
 
 .subheadline {
@@ -397,6 +416,7 @@ p {
 	font-size: 15px;
 	font-weight: 400;
 	line-height: 20px;
+	text-size-adjust: none;
 }
 
 .subheadline-emphasized {
@@ -404,6 +424,7 @@ p {
 	font-size: 15px;
 	font-weight: 590;
 	line-height: 20px;
+	text-size-adjust: none;
 }
 
 .subheadline-italic {
@@ -412,6 +433,7 @@ p {
 	font-style: italic;
 	font-weight: 400;
 	line-height: 20px;
+	text-size-adjust: none;
 }
 
 .subheadline-emphasized-italic {
@@ -420,6 +442,7 @@ p {
 	font-style: italic;
 	font-weight: 590;
 	line-height: 20px;
+	text-size-adjust: none;
 }
 
 .footnote {
@@ -427,6 +450,7 @@ p {
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 18px;
+	text-size-adjust: none;
 }
 
 .footnote-emphasized {
@@ -434,6 +458,7 @@ p {
 	font-size: 13px;
 	font-weight: 590;
 	line-height: 18px;
+	text-size-adjust: none;
 }
 
 .footnote-italic {
@@ -442,6 +467,7 @@ p {
 	font-style: italic;
 	font-weight: 400;
 	line-height: 18px;
+	text-size-adjust: none;
 }
 
 .footnote-emphasized-italic {
@@ -450,6 +476,7 @@ p {
 	font-style: italic;
 	font-weight: 590;
 	line-height: 18px;
+	text-size-adjust: none;
 }
 
 .caption1 {
@@ -457,6 +484,7 @@ p {
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 16px;
+	text-size-adjust: none;
 }
 
 .caption1-emphasized {
@@ -464,6 +492,7 @@ p {
 	font-size: 12px;
 	font-weight: 510;
 	line-height: 16px;
+	text-size-adjust: none;
 }
 
 .caption1-italic {
@@ -472,6 +501,7 @@ p {
 	font-style: italic;
 	font-weight: 400;
 	line-height: 16px;
+	text-size-adjust: none;
 }
 
 .caption1-emphasized-italic {
@@ -480,6 +510,7 @@ p {
 	font-style: italic;
 	font-weight: 508;
 	line-height: 16px;
+	text-size-adjust: none;
 }
 
 .caption2 {
@@ -487,6 +518,7 @@ p {
 	font-size: 11px;
 	font-weight: 400;
 	line-height: 13px;
+	text-size-adjust: none;
 }
 
 .caption2-emphasized {
@@ -494,6 +526,7 @@ p {
 	font-size: 11px;
 	font-weight: 590;
 	line-height: 13px;
+	text-size-adjust: none;
 }
 
 .caption2-italic {
@@ -502,6 +535,7 @@ p {
 	font-style: italic;
 	font-weight: 400;
 	line-height: 13px;
+	text-size-adjust: none;
 }
 
 .caption2-emphasized-italic {
@@ -510,10 +544,12 @@ p {
 	font-style: italic;
 	font-weight: 590;
 	line-height: 13px;
+	text-size-adjust: none;
 }
 
 .symbol {
 	font-family: var(--symbol-font-family);
 	user-select: none;
+	text-size-adjust: none;
 	-webkit-user-select: none;
 }
