@@ -38,7 +38,7 @@
 <button
 	bind:this={inputElement}
 	{id}
-	style="background: {backgroundStyle}; color: {colorStyle}; {style}"
+	style="{style}; background: {backgroundStyle}; color: {colorStyle}"
 	on:click={handlePress}
 >
 	<p class="body">{label}</p>
@@ -47,7 +47,7 @@
 <style>
 	button {
 		align-items: center;
-		border-radius: 48px;
+		border-radius: 54px;
 		display: flex;
 		justify-content: center;
 		padding: 16px 13px;
