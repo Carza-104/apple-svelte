@@ -79,7 +79,8 @@
 		flex-direction: column;
 		gap: 10px;
 		margin: 14px;
-		max-width: 300px;
+		padding: 14px;
+		width: 300px;
 	}
 
 	.action-sheet::before {
