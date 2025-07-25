@@ -582,7 +582,6 @@ p {
 	border: unset;
 	color: var(--labels-primary);
 	font-size: 17px;
-	padding: 32px;
 	position: absolute;
 	z-index: 1;
 }
