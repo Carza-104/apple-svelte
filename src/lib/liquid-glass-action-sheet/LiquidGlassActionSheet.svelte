@@ -86,7 +86,7 @@
 		border-radius: 34px;
 	}
 
-	.action-sheet:after {
+	.action-sheet::after {
 		border-radius: 34px;
 	}
 
