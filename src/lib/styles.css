@@ -89,6 +89,19 @@
 	--fills-secondary: rgb(120, 120, 128, 0.16);
 	--fills-tertiary: rgb(118, 118, 128, 0.12);
 	--fills-quaternary: rgb(116, 116, 128, 0.08);
+
+	/* Liquid Glass: */
+	--liquid-glass-outline: rgb(255, 255, 255, 0.5);
+	--liquid-glass-primary-background-blend-mode: color-dodge;
+	--liquid-glass-secondary-background-blend-mode: color-dodge;
+
+	--liquid-glass-small-background-blur-addend: 3px;
+	--liquid-glass-medium-background-blur-addend: 10px;
+	--liquid-glass-large-background-blur-addend: 12.5px;
+
+	--liquid-glass-small-bg: rgb(247, 247, 247, 0.09);
+	--liquid-glass-medium-bg: rgb(250, 250, 250, 0.07);
+	--liquid-glass-large-bg: rgb(245, 245, 245, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -173,6 +186,15 @@
 		--fills-secondary: rgb(120, 120, 128, 0.32);
 		--fills-tertiary: rgb(118, 118, 128, 0.24);
 		--fills-quaternary: rgb(116, 116, 128, 0.18);
+
+		/* Liquid Glass: */
+		--liquid-glass-outline: white;
+		--liquid-glass-primary-background-blend-mode: color-burn;
+		--liquid-glass-secondary-background-blend-mode: unset;
+
+		--liquid-glass-small-bg: rgb(0, 0, 0, 0.06);
+		--liquid-glass-medium-bg: rgb(0, 0, 0, 0.05);
+		--liquid-glass-large-bg: rgb(0, 0, 0, 0.05);
 	}
 }
 
@@ -552,4 +574,82 @@ p {
 	user-select: none;
 	text-size-adjust: none;
 	-webkit-user-select: none;
+}
+
+/* Liquid Glass styles: */
+
+.liquid-glass {
+	border-radius: var(--button-border-radius);
+	border: unset;
+	color: var(--labels-primary);
+	cursor: grab;
+	font-size: 17px;
+	padding: 32px;
+	position: absolute;
+	z-index: 1;
+}
+
+.liquid-glass::before {
+	border-radius: var(--button-border-radius);
+	content: '';
+	height: 100%;
+	left: 0px;
+	mask-image: radial-gradient(black, transparent);
+	mix-blend-mode: var(--liquid-glass-primary-background-blend-mode);
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	z-index: -1;
+}
+
+.liquid-glass::after {
+	border-radius: var(--button-border-radius);
+	box-shadow: inset 1px 1px var(--liquid-glass-outline);
+	content: '';
+	height: 100%;
+	left: 0px;
+	mix-blend-mode: var(--liquid-glass-secondary-background-blend-mode);
+	opacity: 50%;
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	z-index: -1;
+}
+
+/* Liquid Glass size styles: */
+
+.liquid-glass-small {
+	background: var(--liquid-glass-small-bg);
+}
+
+.liquid-glass-small::before {
+	backdrop-filter: blur(calc(20px + var(--liquid-glass-small-background-blur-addend)));
+}
+
+.liquid-glass-small::after {
+	backdrop-filter: blur(calc(10px + var(--liquid-glass-small-background-blur-addend)));
+}
+
+.liquid-glass-medium {
+	background: var(--liquid-glass-medium-bg);
+}
+
+.liquid-glass-medium::before {
+	backdrop-filter: blur(calc(20px + var(--liquid-glass-medium-background-blur-addend)));
+}
+
+.liquid-glass-medium::after {
+	backdrop-filter: blur(calc(10px + var(--liquid-glass-medium-background-blur-addend)));
+}
+
+.liquid-glass-large {
+	background: var(--liquid-glass-large-bg);
+}
+
+.liquid-glass-large::before {
+	backdrop-filter: blur(calc(20px + var(--liquid-glass-large-background-blur-addend)));
+}
+
+.liquid-glass-large::after {
+	backdrop-filter: blur(calc(10px + var(--liquid-glass-large-background-blur-addend)));
 }
