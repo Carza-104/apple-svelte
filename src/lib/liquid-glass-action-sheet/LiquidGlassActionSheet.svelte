@@ -1,6 +1,7 @@
 <script>
 	export let state = 'default';
 	/* export let state = 'hidden'; */
+	export let showHeader = false;
 	export let headerTitle = 'Header Title';
 	export let showDescription = false;
 	export let headerDescription = 'A message should be a short, complete sentence.';
@@ -47,12 +48,14 @@
 <label style="display: {displayStyle}; height: {heightStyle}; width: {widthStyle}">
 	<button bind:this={inputElement} class="hidden-input" on:click={handlePress} />
 	<div class="action-sheet liquid-glass liquid-glass-medium" {id} {style}>
-		<div class="header">
-			<p class="headline">{headerTitle}</p>
-			{#if showDescription}
-				<p class="body">{headerDescription}</p>
-			{/if}
-		</div>
+		{#if showHeader}
+			<div class="header">
+				<p class="headline">{headerTitle}</p>
+				{#if showDescription}
+					<p class="body">{headerDescription}</p>
+				{/if}
+			</div>
+		{/if}
 		<slot />
 	</div>
 </label>
