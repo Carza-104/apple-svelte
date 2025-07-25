@@ -12,7 +12,7 @@
 	let colorStyle = 'unset';
 	if (state === 'primary') {
 		backgroundStyle = 'var(--colors-accent)';
-		colorStyle = 'white';
+		colorStyle = '#fff';
 	} else if (state === 'secondary') {
 		backgroundStyle = 'var(--fills-secondary)';
 		colorStyle = 'var(--labels-primary)';
