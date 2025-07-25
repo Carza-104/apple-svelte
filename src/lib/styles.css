@@ -579,10 +579,8 @@ p {
 /* Liquid Glass styles: */
 
 .liquid-glass {
-	border-radius: var(--button-border-radius);
 	border: unset;
 	color: var(--labels-primary);
-	cursor: grab;
 	font-size: 17px;
 	padding: 32px;
 	position: absolute;
@@ -590,7 +588,6 @@ p {
 }
 
 .liquid-glass::before {
-	border-radius: var(--button-border-radius);
 	content: '';
 	height: 100%;
 	left: 0px;
@@ -603,7 +600,6 @@ p {
 }
 
 .liquid-glass::after {
-	border-radius: var(--button-border-radius);
 	box-shadow: inset 1px 1px var(--liquid-glass-outline);
 	content: '';
 	height: 100%;
