@@ -51,7 +51,7 @@
 		display: flex;
 		justify-content: center;
 		padding: 16px 13px;
-		width: 100%;
+		/* width: 100%; */
 	}
 
 	button:active {
