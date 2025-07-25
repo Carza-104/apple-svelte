@@ -78,7 +78,6 @@
 		flex: 1;
 		flex-direction: column;
 		gap: 10px;
-		margin: 14px;
 		padding: 14px;
 		width: 300px;
 	}
