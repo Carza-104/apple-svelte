@@ -18,11 +18,11 @@
 	} else if (state === 'secondary') {
 		backgroundStyle = 'var(--fills-secondary)';
 		colorStyle = 'var(--labels-primary)';
-		mixBlendMode = 'var(--liquid-glass-secondary-tertiary-blend-mode)';
+		mixBlendMode = 'var(--liquid-glass-tertiary-blend-mode)';
 	} else {
 		backgroundStyle = 'var(--fills-secondary)';
 		colorStyle = 'var(--colors-red)';
-		mixBlendMode = 'var(--liquid-glass-secondary-tertiary-blend-mode)';
+		mixBlendMode = 'var(--liquid-glass-tertiary-blend-mode)';
 	}
 
 	if (state === 'disabled') {
