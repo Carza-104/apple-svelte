@@ -50,53 +50,51 @@
 	}
 </script>
 
-<label>
-	{#if labelType === 'symbol'}
-		<button
-			bind:this={inputElement}
-			class="symbol-button liquid-glass liquid-glass-small"
-			{id}
-			on:click={handlePress}
-			style="{style}; height: {heightStyle}; width: {widthStyle}"
-		>
-			{#if size === 'large'}
-				<p class="symbol primary">{symbol}</p>
-			{:else}
-				<p class="symbol secondary">{symbol}</p>
-			{/if}
-		</button>
-	{:else if labelType === 'text'}
-		<button
-			bind:this={inputElement}
-			class="text-button liquid-glass liquid-glass-small"
-			{id}
-			on:click={handlePress}
-			style="{style}; gap: {gapStyle}; padding: {paddingStyle}"
-		>
-			{#if size === 'large'}
-				<p class="body">{label}</p>
-			{:else}
-				<p class="subheadline">{label}</p>
-			{/if}
-		</button>
-	{:else}
-		<button
-			bind:this={inputElement}
-			class="text-button liquid-glass liquid-glass-small"
-			{id}
-			on:click={handlePress}
-			style="{style}; gap: {gapStyle}; padding: {paddingStyle}"
-		>
-			{#if size === 'large'}
-				<p class="symbol primary">{symbol}</p>
-				<p class="body">{label}</p>
-			{:else}
-				<p class="symbol secondary">{symbol}</p>
-				<p class="subheadline">{label}</p>
-			{/if}
-		</button>
-	{/if}
-</label>
+{#if labelType === 'symbol'}
+	<button
+		bind:this={inputElement}
+		class="symbol-button liquid-glass liquid-glass-small"
+		{id}
+		on:click={handlePress}
+		style="{style}; height: {heightStyle}; width: {widthStyle}"
+	>
+		{#if size === 'large'}
+			<p class="symbol primary">{symbol}</p>
+		{:else}
+			<p class="symbol secondary">{symbol}</p>
+		{/if}
+	</button>
+{:else if labelType === 'text'}
+	<button
+		bind:this={inputElement}
+		class="text-button liquid-glass liquid-glass-small"
+		{id}
+		on:click={handlePress}
+		style="{style}; gap: {gapStyle}; padding: {paddingStyle}"
+	>
+		{#if size === 'large'}
+			<p class="body">{label}</p>
+		{:else}
+			<p class="subheadline">{label}</p>
+		{/if}
+	</button>
+{:else}
+	<button
+		bind:this={inputElement}
+		class="text-button liquid-glass liquid-glass-small"
+		{id}
+		on:click={handlePress}
+		style="{style}; gap: {gapStyle}; padding: {paddingStyle}"
+	>
+		{#if size === 'large'}
+			<p class="symbol primary">{symbol}</p>
+			<p class="body">{label}</p>
+		{:else}
+			<p class="symbol secondary">{symbol}</p>
+			<p class="subheadline">{label}</p>
+		{/if}
+	</button>
+{/if}
 
 <style>
 	.symbol-button {
@@ -140,7 +138,7 @@
 	button:active {
 		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
 			var(--liquid-glass-small-bg) !important;
-		opacity: unset !important;
+		/* opacity: unset !important; */
 		outline: unset !important;
 	}
 
@@ -149,6 +147,7 @@
 	}
 
 	button:hover {
-		opacity: var(--hover-opacity);
+		background: linear-gradient(rgb(0, 0, 0, 0.2) 0%, rgb(0, 0, 0, 0.2)),
+			var(--liquid-glass-small-bg);
 	}
 </style>
