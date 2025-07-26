@@ -52,10 +52,12 @@
 		display: flex;
 		flex: 1;
 		height: 100%;
+		justify-content: center;
+		padding-right: 16px;
 	}
 
 	label:last-child > button {
-		border-bottom: unset;
+		box-shadow: unset;
 	}
 
 	label:active {
