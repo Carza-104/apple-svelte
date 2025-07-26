@@ -72,7 +72,7 @@
 	input[type='range'] {
 		appearance: none;
 		align-items: center;
-		border-radius: 2px;
+		border-radius: 4px;
 		background: var(--fills-secondary);
 		cursor: pointer;
 		display: flex;
@@ -101,7 +101,7 @@
 
 	input[type='range']::-moz-range-progress {
 		appearance: none;
-		border-radius: 2px;
+		border-radius: 4px;
 		background: var(--colors-accent);
 		cursor: pointer;
 		height: 4px;
