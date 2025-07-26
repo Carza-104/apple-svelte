@@ -90,7 +90,7 @@
 	}
 
 	.list {
-		border-radius: 10px;
+		border-radius: 26px;
 		overflow: hidden;
 	}
 
