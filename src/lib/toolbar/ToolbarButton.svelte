@@ -22,7 +22,7 @@
 	{#if type === 'symbol'}
 		<p class="symbol">{symbol}</p>
 	{:else}
-		<p class="label">{label}</p>
+		<p class="label body">{label}</p>
 	{/if}
 </button>
 
@@ -41,9 +41,6 @@
 
 	.label {
 		color: var(--colors-accent);
-		font-size: 17px;
-		font-weight: 400;
-		line-height: 22px;
 	}
 
 	button:active p {
