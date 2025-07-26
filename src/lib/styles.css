@@ -30,29 +30,29 @@
 	--colors-accent: var(--colors-blue);
 	--colors-accent-2: var(--colors-blue-2);
 	--colors-red: #ff383c;
-	--colors-red-2: rgb(255, 59, 48, 0.15);
+	--colors-red-2: rgb(255, 56, 60, 0.15);
 	--colors-orange: #ff8d28;
-	--colors-orange-2: rgb(255, 149, 0, 0.15);
+	--colors-orange-2: rgb(255, 141, 40, 0.15);
 	--colors-yellow: #fc0;
 	--colors-yellow-2: rgb(255, 204, 0, 0.15);
 	--colors-green: #34c759;
 	--colors-green-2: rgb(52, 199, 89, 0.15);
 	--colors-mint: #00c8b3;
-	--colors-mint-2: rgb(0, 199, 190, 0.15);
+	--colors-mint-2: rgb(0, 200, 179, 0.15);
 	--colors-teal: #00c3d0;
-	--colors-teal-2: rgb(48, 176, 199, 0.15);
+	--colors-teal-2: rgb(0, 195, 208, 0.15);
 	--colors-cyan: #00c0e8;
-	--colors-cyan-2: rgb(50, 173, 230, 0.15);
+	--colors-cyan-2: rgb(0, 192, 232, 0.15);
 	--colors-blue: #0088ff;
-	--colors-blue-2: rgb(0, 122, 255, 0.15);
+	--colors-blue-2: rgb(0, 136, 255, 0.15);
 	--colors-indigo: #6155f5;
-	--colors-indigo-2: rgb(88, 86, 214, 0.15);
+	--colors-indigo-2: rgb(97, 85, 245, 0.15);
 	--colors-purple: #cb30e0;
-	--colors-purple-2: rgb(175, 82, 222, 0.15);
+	--colors-purple-2: rgb(203, 48, 224, 0.15);
 	--colors-pink: #ff2d55;
 	--colors-pink-2: rgb(255, 45, 85, 0.15);
 	--colors-brown: #ac7f5e;
-	--colors-brown-2: rgb(162, 132, 94, 0.15);
+	--colors-brown-2: rgb(172, 127, 94, 0.15);
 
 	/* Grays: */
 	--grays-black: #000;
@@ -122,29 +122,29 @@
 
 		/* Colors: */
 		--colors-red: #ff4245;
-		--colors-red-2: rgb(255, 69, 58, 0.15);
+		--colors-red-2: rgb(255, 66, 69, 0.15);
 		--colors-orange: #ff9230;
-		--colors-orange-2: rgb(255, 159, 10, 0.15);
+		--colors-orange-2: rgb(255, 146, 48, 0.15);
 		--colors-yellow: #ffd600;
-		--colors-yellow-2: rgb(255, 214, 10, 0.15);
+		--colors-yellow-2: rgb(255, 214, 0, 0.15);
 		--colors-green: #30d158;
 		--colors-green-2: rgb(48, 209, 88, 0.15);
 		--colors-mint: #00dac3;
-		--colors-mint-2: rgb(99, 230, 226, 0.15);
+		--colors-mint-2: rgb(0, 218, 195, 0.15);
 		--colors-teal: #00d2e0;
-		--colors-teal-2: rgb(64, 203, 224, 0.15);
+		--colors-teal-2: rgb(0, 210, 224, 0.15);
 		--colors-cyan: #3cd3fe;
-		--colors-cyan-2: rgb(100, 210, 255, 0.15);
+		--colors-cyan-2: rgb(60, 211, 254, 0.15);
 		--colors-blue: #0091ff;
-		--colors-blue-2: rgb(10, 132, 255, 0.15);
+		--colors-blue-2: rgb(0, 145, 255, 0.15);
 		--colors-indigo: #6b5dff;
-		--colors-indigo-2: rgb(94, 92, 230, 0.15);
+		--colors-indigo-2: rgb(107, 93, 255, 0.15);
 		--colors-purple: #db34f2;
-		--colors-purple-2: rgb(191, 90, 242, 0.15);
+		--colors-purple-2: rgb(219, 52, 242, 0.15);
 		--colors-pink: #ff375f;
 		--colors-pink-2: rgb(255, 55, 95, 0.15);
 		--colors-brown: #b78a66;
-		--colors-brown-2: rgb(172, 142, 104, 0.15);
+		--colors-brown-2: rgb(183, 138, 102, 0.15);
 
 		/* Grays: */
 		--grays-black: #000;
