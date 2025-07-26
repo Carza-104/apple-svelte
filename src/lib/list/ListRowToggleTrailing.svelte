@@ -57,7 +57,7 @@
 	label {
 		align-items: center;
 		background: var(--colors-green);
-		border-radius: 15.5px;
+		border-radius: 31px;
 		display: flex;
 		height: 31px;
 		overflow: hidden;
