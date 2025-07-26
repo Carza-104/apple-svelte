@@ -10,15 +10,19 @@
 
 	let backgroundStyle = 'unset';
 	let colorStyle = 'unset';
+	let mixBlendMode = 'unset';
 	if (state === 'primary') {
 		backgroundStyle = 'var(--colors-accent)';
 		colorStyle = '#fff';
+		mixBlendMode = 'unset';
 	} else if (state === 'secondary') {
 		backgroundStyle = 'var(--fills-secondary)';
 		colorStyle = 'var(--labels-primary)';
+		mixBlendMode = 'var(--liquid-glass-secondary-tertiary-blend-mode)';
 	} else {
 		backgroundStyle = 'var(--fills-secondary)';
 		colorStyle = 'var(--colors-red)';
+		mixBlendMode = 'var(--liquid-glass-secondary-tertiary-blend-mode)';
 	}
 
 	if (state === 'disabled') {
@@ -38,7 +42,7 @@
 <button
 	bind:this={inputElement}
 	{id}
-	style="{style}; background: {backgroundStyle}; color: {colorStyle}"
+	style="{style}; background: {backgroundStyle}; color: {colorStyle}; mix-blend-mode: {mixBlendMode}"
 	on:click={handlePress}
 >
 	<p class="body">{label}</p>
