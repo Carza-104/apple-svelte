@@ -579,10 +579,10 @@ p {
 /* Liquid Glass styles: */
 
 .liquid-glass {
-	border: unset;
+	/* border: unset; */
 	color: var(--labels-primary);
 	font-size: 17px;
-	position: absolute;
+	position: relative;
 	z-index: 1;
 }
 
