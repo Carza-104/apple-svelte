@@ -94,6 +94,7 @@
 	--liquid-glass-outline: rgb(255, 255, 255, 0.5);
 	--liquid-glass-primary-background-blend-mode: color-dodge;
 	--liquid-glass-secondary-background-blend-mode: color-dodge;
+	--liquid-glass-secondary-tertiary-blend-mode: plus-darker;
 
 	--liquid-glass-small-background-blur-addend: 3px;
 	--liquid-glass-medium-background-blur-addend: 10px;
@@ -191,6 +192,7 @@
 		--liquid-glass-outline: white;
 		--liquid-glass-primary-background-blend-mode: color-burn;
 		--liquid-glass-secondary-background-blend-mode: unset;
+		--liquid-glass-secondary-tertiary-blend-mode: plus-lighter;
 
 		--liquid-glass-small-bg: rgb(0, 0, 0, 0.06);
 		--liquid-glass-medium-bg: rgb(0, 0, 0, 0.05);
