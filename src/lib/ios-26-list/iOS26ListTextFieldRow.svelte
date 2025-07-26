@@ -40,6 +40,6 @@
 	}
 
 	label:last-child > div {
-		border-bottom: unset;
+		box-shadow: unset;
 	}
 </style>

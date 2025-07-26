@@ -109,7 +109,7 @@
 	}
 
 	label:last-child > div {
-		border-bottom: unset;
+		box-shadow: unset;
 	}
 
 	input[type='range']:active::-moz-range-thumb,

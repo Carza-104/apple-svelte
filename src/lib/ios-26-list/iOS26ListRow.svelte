@@ -194,7 +194,7 @@
 	}
 
 	.row:last-child > .title-and-trailing-accessories {
-		border-bottom: unset;
+		box-shadow: unset;
 	}
 
 	.row:active {
