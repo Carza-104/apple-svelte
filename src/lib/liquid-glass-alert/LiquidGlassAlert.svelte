@@ -96,7 +96,7 @@
 		flex-direction: column;
 		gap: 10px;
 		padding: 14px;
-		width: 300px;
+		max-width: 300px;
 	}
 
 	.alert::before {
