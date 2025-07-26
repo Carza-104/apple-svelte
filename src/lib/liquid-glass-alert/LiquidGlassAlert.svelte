@@ -92,11 +92,11 @@
 		border-radius: 34px;
 		box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.08);
 		display: flex;
-		flex: 1;
 		flex-direction: column;
+		flex: 1;
 		gap: 10px;
-		padding: 14px;
 		max-width: 300px;
+		padding: 14px;
 	}
 
 	.alert::before {
