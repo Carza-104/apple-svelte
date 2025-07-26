@@ -136,8 +136,7 @@
 	}
 
 	button:active {
-		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
-			var(--liquid-glass-small-bg) !important;
+		background: var(--liquid-glass-small-bg) !important;
 		/* opacity: unset !important; */
 		outline: unset !important;
 	}
@@ -147,7 +146,7 @@
 	}
 
 	button:hover {
-		background: linear-gradient(rgb(0, 0, 0, 0.2) 0%, rgb(0, 0, 0, 0.2)),
+		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
 			var(--liquid-glass-small-bg);
 	}
 </style>
