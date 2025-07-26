@@ -27,7 +27,7 @@
 		background: var(--fills-secondary);
 		border-radius: 26px;
 		margin-bottom: 19px;
-		mix-blend-mode: plus-darker;
+		mix-blend-mode: var(--liquid-glass-secondary-tertiary-blend-mode);
 		padding: 16px;
 		width: calc(100% - 28px);
 	}
