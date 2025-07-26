@@ -603,10 +603,8 @@ p {
 }
 
 .liquid-glass::after {
-	-webkit-backdrop-filter: unset;
 	/* mix-blend-mode: var(--liquid-glass-secondary-background-blend-mode); */
 	/* opacity: 50%; */
-	backdrop-filter: unset;
 	box-shadow: inset 1px 1px var(--liquid-glass-outline);
 	content: '';
 	height: 100%;
