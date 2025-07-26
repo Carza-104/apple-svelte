@@ -177,7 +177,7 @@
 
 	.title-and-trailing-accessories {
 		align-items: center;
-		border-bottom: 0.33px solid var(--separators-non-opaque);
+		box-shadow: 0px 0.33px var(--separators-non-opaque);
 		display: flex;
 		flex: 1;
 		height: 100%;
