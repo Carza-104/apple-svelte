@@ -22,9 +22,9 @@
 	<label>
 		<p class="symbol primary">{searchSymbol}</p>
 		{#if showPlaceholder}
-			<input bind:value {id} type="text" />
+			<input bind:value class="body" {id} type="text" />
 		{:else}
-			<input bind:value {id} {placeholder} type="text" />
+			<input bind:value class="body" {id} {placeholder} type="text" />
 		{/if}
 		<p class="symbol secondary">{dictationSymbol}</p>
 		<button class="symbol secondary" on:click={handleCancelPress}>{cancelSymbol}</button>
@@ -59,9 +59,6 @@
 
 	input {
 		display: flex;
-		font-size: 17px;
-		font-weight: 400;
-		line-height: 22px;
 		width: 100%;
 	}
 

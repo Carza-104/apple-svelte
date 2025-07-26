@@ -31,7 +31,7 @@
 
 <button bind:this={inputElement} {id} on:click={handlePress} style="{style}; color: {colorStyle}">
 	<p class="symbol">{symbol}</p>
-	<p class="label">{label}</p>
+	<p class="body">{label}</p>
 </button>
 
 <style>
@@ -45,12 +45,6 @@
 		font-feature-settings: 'ss16' on;
 		font-size: calc(17px * var(--large-symbol-font-size-multiplier));
 		font-weight: calc(590 / var(--large-symbol-font-size-multiplier));
-		line-height: 22px;
-	}
-
-	.label {
-		font-size: 17px;
-		font-weight: 400;
 		line-height: 22px;
 	}
 

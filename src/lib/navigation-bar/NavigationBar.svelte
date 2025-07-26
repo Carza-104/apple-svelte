@@ -32,7 +32,7 @@
 	<div class="title-and-controls">
 		<slot name="leading" />
 		{#if size === 'default'}
-			<p class="title">{title}</p>
+			<p class="body-emphasized">{title}</p>
 		{/if}
 		<div class="trailing">
 			<slot name="trailing-1" />
@@ -41,7 +41,7 @@
 		</div>
 	</div>
 	{#if size === 'large'}
-		<h1>{title}</h1>
+		<h1 class="large-title-emphasized">{title}</h1>
 	{/if}
 	<slot name="search-field" />
 </div>
@@ -70,21 +70,8 @@
 		padding: 11px 16px 11px 8px;
 	}
 
-	.title {
-		font-size: 17px;
-		font-weight: 590;
-		line-height: 22px;
-	}
-
 	.trailing {
 		display: flex;
 		gap: 16px;
-	}
-
-	h1 {
-		font-size: 34px;
-		font-weight: 700;
-		line-height: 41px;
-		margin: 3px 16px 8px;
 	}
 </style>
