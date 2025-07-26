@@ -33,9 +33,15 @@
 		{#if headerType === 'default'}
 			<p class="headline">{header}</p>
 		{:else if headerType === 'plain'}
-			<p class="title3-emphasized">{header}</p>
+			<label class="plain">
+				<p class="title3-emphasized">{header}</p>
+				<div class="detail">
+					<p class="body">{detail}</p>
+					<button class="symbol" on:click={onPress}>{disclosure}</button>
+				</div>
+			</label>
 		{:else}
-			<label class="header">
+			<label class="prominent">
 				{header}
 				<div class="detail">
 					<p class="body">{detail}</p>
@@ -58,11 +64,17 @@
 		margin: 0px 16px 10px;
 	}
 
-	.title3-emphasized {
+	.plain {
+		display: flex;
+		justify-content: space-between;
 		margin: 0px 16px 5px;
 	}
 
-	.header {
+	/* 	.title3-emphasized {
+		margin: 0px 16px 5px;
+	} */
+
+	.prominent {
 		display: flex;
 		font-size: 20px;
 		font-weight: 590;
