@@ -62,7 +62,7 @@
 
 <style>
 	label {
-		align-items: end;
+		align-items: center;
 		cursor: unset;
 		display: flex;
 		height: 100vh;
