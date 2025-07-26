@@ -43,7 +43,7 @@
 {:else if type === 'label'}
 	<button
 		bind:this={inputElement}
-		class="label"
+		class="body"
 		{id}
 		on:click={handlePress}
 		style="{style}; color: {colorStyle}">{label}</button
@@ -51,7 +51,7 @@
 {:else}
 	<button
 		bind:this={inputElement}
-		class="label-emphasized"
+		class="body-emphasized"
 		{id}
 		on:click={handlePress}
 		style="{style}; color: {colorStyle}">{label}</button
@@ -63,18 +63,6 @@
 		font-feature-settings: 'ss16' on;
 		font-size: calc(17px * var(--large-symbol-font-size-multiplier));
 		font-weight: calc(400 / var(--large-symbol-font-size-multiplier));
-		line-height: 22px;
-	}
-
-	.label {
-		font-size: 17px;
-		font-weight: 400;
-		line-height: 22px;
-	}
-
-	.label-emphasized {
-		font-size: 17px;
-		font-weight: 590;
 		line-height: 22px;
 	}
 

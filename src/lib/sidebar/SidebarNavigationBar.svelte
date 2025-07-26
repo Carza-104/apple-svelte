@@ -27,12 +27,12 @@
 	<div>
 		<slot name="leading" />
 		{#if scrollPosition === 'lower'}
-			<p>{title}</p>
+			<p class="body">{title}</p>
 		{/if}
 		<slot name="trailing" />
 	</div>
 	{#if scrollPosition === 'top'}
-		<h1>{title}</h1>
+		<h1 class="large-title-emphasized">{title}</h1>
 	{/if}
 </section>
 
@@ -61,16 +61,7 @@
 		padding: 11px 8px;
 	}
 
-	p {
-		font-size: 17px;
-		font-weight: 590;
-		line-height: 22px;
-	}
-
 	h1 {
-		font-size: 34px;
-		font-weight: 700;
-		line-height: 41px;
 		margin: 4px 8px;
 	}
 </style>

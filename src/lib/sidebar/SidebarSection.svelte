@@ -45,7 +45,7 @@
 <section>
 	{#if showHeading}
 		<label {id} style="{style}; border-bottom: {borderBottomStyle}">
-			<p>{heading}</p>
+			<p class="title3-emphasized">{heading}</p>
 			<button
 				bind:this={inputElement}
 				class="symbol"
@@ -85,12 +85,6 @@
 		justify-content: space-between;
 		margin: 0px 16px;
 		padding: 0px 8px;
-	}
-
-	p {
-		font-size: 20px;
-		font-weight: 590;
-		line-height: 25px;
 	}
 
 	button {
