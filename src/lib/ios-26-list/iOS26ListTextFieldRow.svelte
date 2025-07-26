@@ -24,7 +24,7 @@
 
 	div {
 		align-items: center;
-		box-shadow: 0px 0.33px var(--separators-non-opaque);
+		box-shadow: 0px 0.5px var(--separators-non-opaque);
 		display: flex;
 		flex: 1;
 		height: 100%;
