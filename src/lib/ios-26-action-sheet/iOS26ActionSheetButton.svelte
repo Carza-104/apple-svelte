@@ -61,12 +61,12 @@
 	button:active {
 		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
 			var(--fills-secondary) !important;
-		border: unset !important;
+		outline: unset !important;
 		opacity: unset !important;
 	}
 
 	button:focus {
-		border: 2px solid var(--colors-accent);
+		outline: 2px solid var(--colors-accent);
 	}
 
 	button:hover {
