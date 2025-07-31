@@ -8,5 +8,33 @@
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div>%sveltekit.body%</div>
+		<svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+			<filter height="100%" id="displacementDistortionFilter" width="100%" x="0px" y="0px">
+				<feImage href="%sveltekit.assets%/filter.svg" result="colorMap" />
+				<feDisplacementMap
+					in="SourceGraphic"
+					in2="colorMap"
+					scale="25"
+					xChannelSelector="R"
+					yChannelSelector="G"
+				/>
+			</filter>
+		</svg>
 	</body>
+	<style>
+		.liquid-glass-small {
+			backdrop-filter: blur(calc(var(--liquid-glass-small-background-blur-addend) / 2))
+				url(#displacementDistortionFilter);
+		}
+
+		.liquid-glass-medium {
+			backdrop-filter: blur(calc(var(--liquid-glass-medium-background-blur-addend) / 2))
+				url(#displacementDistortionFilter);
+		}
+
+		.liquid-glass-large {
+			backdrop-filter: blur(calc(var(--liquid-glass-small-background-blur-addend) / 2))
+				url(#displacementDistortionFilter);
+		}
+	</style>
 </html>
