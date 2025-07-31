@@ -66,7 +66,7 @@
 	}
 
 	.symbol:focus {
-		border-radius: 8px;
+		border-radius: 32px;
 		outline: 2px solid var(--colors-accent);
 		outline-offset: -2px;
 	}
