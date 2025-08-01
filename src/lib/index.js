@@ -1,7 +1,3 @@
-/* SVG displacement distortion map: */
-import filter from './assets/filter.svg';
-export { filter };
-
 export { default as ActionSheet } from './action-sheet/ActionSheet.svelte';
 export { default as ActionSheetButton } from './action-sheet/ActionSheetButton.svelte';
 export { default as Alert } from './alert/Alert.svelte';
