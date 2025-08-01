@@ -53,10 +53,6 @@
 		justify-content: center;
 	}
 
-	.label {
-		color: var(--colors-accent);
-	}
-
 	button:active p {
 		opacity: var(--symbol-press-opacity) !important;
 		outline: unset !important;
