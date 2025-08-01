@@ -1,0 +1,67 @@
+<script>
+	export let scrollPosition = 'top';
+	/* export let scrollPosition = "lower"; */
+	export let title = 'Title';
+
+	export let id = undefined;
+	export let style = undefined;
+
+	let backdropFilterStyle = 'unset';
+	let backgroundStyle = 'unset';
+	let backgroundBlendModeStyle = 'unset';
+	let boxShadowStyle = 'unset';
+	let marginBottomStyle = 'unset';
+	if (scrollPosition === 'lower') {
+		backdropFilterStyle = 'var(--materials-backdrop-filter)';
+		backgroundStyle = 'var(--materials-chrome)';
+		backgroundBlendModeStyle = 'var(--materials-chrome-background-blend-mode)';
+		boxShadowStyle = '0px 0.33px var(--sidebar-navigation-bar-box-shadow)';
+		marginBottomStyle = '4px';
+	}
+</script>
+
+<section
+	{id}
+	style="{style}; backdrop-filter: {backdropFilterStyle}; background: {backgroundStyle}; background-blend-mode: {backgroundBlendModeStyle}; box-shadow: {boxShadowStyle}; margin-bottom: {marginBottomStyle}; -webkit-backdrop-filter: {backdropFilterStyle}"
+>
+	<div>
+		<slot name="leading" />
+		{#if scrollPosition === 'lower'}
+			<p class="body">{title}</p>
+		{/if}
+		<slot name="trailing" />
+	</div>
+	{#if scrollPosition === 'top'}
+		<h1 class="large-title-emphasized">{title}</h1>
+	{/if}
+</section>
+
+<style>
+	:root {
+		color-scheme: light dark;
+		--sidebar-navigation-bar-box-shadow: rgb(0, 0, 0, 0.3);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--sidebar-navigation-bar-box-shadow: rgb(255, 255, 255, 0.15);
+		}
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		padding: 27px 16px 0px;
+	}
+
+	div {
+		display: flex;
+		justify-content: space-between;
+		padding: 11px 8px;
+	}
+
+	h1 {
+		margin: 4px 8px;
+	}
+</style>
