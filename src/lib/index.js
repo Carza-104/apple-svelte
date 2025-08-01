@@ -25,7 +25,6 @@ export { default as iOS26ListTextFieldRow } from './ios-26-list/iOS26ListTextFie
 export { default as iOS26SegmentedControl } from './ios-26-segmented-control/iOS26SegmentedControl.svelte';
 export { default as iOS26SegmentedControlButton } from './ios-26-segmented-control/iOS26SegmentedControlButton.svelte';
 export { default as iOS26Sidebar } from './ios-26-sidebar/iOS26Sidebar.svelte';
-export { default as iOS26Sidebar } from './ios-26-sidebar/iOS26Sidebar.svelte';
 export { default as iOS26SidebarNavigationBar } from './ios-26-sidebar/iOS26SidebarNavigationBar.svelte';
 export { default as iOS26SidebarNavigationBarLeading } from './ios-26-sidebar/iOS26SidebarNavigationBarLeading.svelte';
 export { default as iOS26SidebarNavigationBarTrailing } from './ios-26-sidebar/iOS26SidebarNavigationBarTrailing.svelte';
