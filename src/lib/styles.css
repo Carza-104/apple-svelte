@@ -637,12 +637,12 @@ p {
 
 .liquid-glass-medium::before {
 	backdrop-filter: blur(calc(10px + var(--liquid-glass-medium-background-blur-addend) / 2));
-	-webkit-backdrop-filter: blur(calc(10px + var(--liquid-glass-small-background-blur-addend) / 2));
+	-webkit-backdrop-filter: blur(calc(10px + var(--liquid-glass-medium-background-blur-addend) / 2));
 }
 
 .liquid-glass-medium::after {
 	backdrop-filter: blur(calc(5px + var(--liquid-glass-medium-background-blur-addend) / 2));
-	-webkit-backdrop-filter: blur(calc(5px + var(--liquid-glass-small-background-blur-addend) / 2));
+	-webkit-backdrop-filter: blur(calc(5px + var(--liquid-glass-medium-background-blur-addend) / 2));
 }
 
 .liquid-glass-large {
@@ -651,10 +651,10 @@ p {
 
 .liquid-glass-large::before {
 	backdrop-filter: blur(calc(10px + var(--liquid-glass-large-background-blur-addend) / 2));
-	-webkit-backdrop-filter: blur(calc(10px + var(--liquid-glass-small-background-blur-addend) / 2));
+	-webkit-backdrop-filter: blur(calc(10px + var(--liquid-glass-large-background-blur-addend) / 2));
 }
 
 .liquid-glass-large::after {
 	backdrop-filter: blur(calc(5px + var(--liquid-glass-large-background-blur-addend) / 2));
-	-webkit-backdrop-filter: blur(calc(5px + var(--liquid-glass-small-background-blur-addend) / 2));
+	-webkit-backdrop-filter: blur(calc(5px + var(--liquid-glass-large-background-blur-addend) / 2));
 }
