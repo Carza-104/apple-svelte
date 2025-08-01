@@ -1,0 +1,79 @@
+<svg
+	height="128px"
+	id="colorMap"
+	viewBox="0 0 128 128"
+	width="128px"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<g clip-path="url(#clipPath)">
+		<path
+			d="M112 0H16C7.16344 0 0 7.16344 0 16V112C0 120.837 7.16344 128 16 128H112C120.837 128 128 120.837 128 112V16C128 7.16344 120.837 0 112 0Z"
+			fill="#808080"
+		/>
+		<path
+			d="M112 0H16C7.16344 0 0 7.16344 0 16V112C0 120.837 7.16344 128 16 128H112C120.837 128 128 120.837 128 112V16C128 7.16344 120.837 0 112 0Z"
+			fill="url(#linearGradient1)"
+		/>
+		<path
+			d="M112 0H16C7.16344 0 0 7.16344 0 16V112C0 120.837 7.16344 128 16 128H112C120.837 128 128 120.837 128 112V16C128 7.16344 120.837 0 112 0Z"
+			fill="url(#linearGradient2)"
+		/>
+		<path
+			d="M112 0H16C7.16344 0 0 7.16344 0 16V112C0 120.837 7.16344 128 16 128H112C120.837 128 128 120.837 128 112V16C128 7.16344 120.837 0 112 0Z"
+			fill="url(#linearGradient3)"
+		/>
+		<path
+			d="M112 0H16C7.16344 0 0 7.16344 0 16V112C0 120.837 7.16344 128 16 128H112C120.837 128 128 120.837 128 112V16C128 7.16344 120.837 0 112 0Z"
+			fill="url(#linearGradient4)"
+		/>
+	</g>
+	<defs>
+		<linearGradient
+			gradientUnits="userSpaceOnUse"
+			id="linearGradient1"
+			x1="64px"
+			x2="0px"
+			y1="64px"
+			y2="64px"
+		>
+			<stop stop-color="#808080" stop-opacity="0" />
+			<stop offset="1" stop-color="#00f" />
+		</linearGradient>
+		<linearGradient
+			gradientUnits="userSpaceOnUse"
+			id="linearGradient2"
+			x1="64px"
+			x2="128px"
+			y1="64px"
+			y2="64px"
+		>
+			<stop stop-color="#808080" stop-opacity="0" />
+			<stop offset="1" stop-color="#80ff80" />
+		</linearGradient>
+		<linearGradient
+			gradientUnits="userSpaceOnUse"
+			id="linearGradient3"
+			x1="64px"
+			x2="64px"
+			y1="64px"
+			y2="128px"
+		>
+			<stop stop-color="#808080" stop-opacity="0" />
+			<stop offset="1" stop-color="#80ff80" />
+		</linearGradient>
+		<linearGradient
+			gradientUnits="userSpaceOnUse"
+			id="linearGradient4"
+			x1="64px"
+			x2="64px"
+			y1="64px"
+			y2="0px"
+		>
+			<stop stop-color="#808080" stop-opacity="0" />
+			<stop offset="1" stop-color="#00f" />
+		</linearGradient>
+		<clipPath id="clipPath">
+			<rect fill="white" height="128px" width="128px" />
+		</clipPath>
+	</defs>
+</svg>
