@@ -6,8 +6,7 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"moduleResolution": "NodeNext",
 		"module": "NodeNext",
-		"verbatimModuleSyntax": true
+		"moduleResolution": "NodeNext"
 	}
 }
