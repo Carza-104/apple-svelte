@@ -48,7 +48,7 @@
 			y2="64px"
 		>
 			<stop stop-color="#808080" stop-opacity="0" />
-			<stop offset="1" stop-color="#ff8000" />
+			<stop offset="1" stop-color="#80ff80" />
 		</linearGradient>
 		<linearGradient
 			gradientUnits="userSpaceOnUse"
@@ -59,7 +59,7 @@
 			y2="128px"
 		>
 			<stop stop-color="#808080" stop-opacity="0" />
-			<stop offset="1" stop-color="#ff8000" />
+			<stop offset="1" stop-color="#80ff80" />
 		</linearGradient>
 		<linearGradient
 			gradientUnits="userSpaceOnUse"
