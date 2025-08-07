@@ -70,6 +70,10 @@
 		padding: 11px 16px 11px 8px;
 	}
 
+	h1 {
+		padding-left: 16px;
+	}
+
 	.trailing {
 		display: flex;
 		gap: 16px;
