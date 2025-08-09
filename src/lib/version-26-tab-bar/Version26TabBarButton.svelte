@@ -62,7 +62,7 @@
 		border-radius: 58px;
 		display: flex;
 		flex-direction: column;
-		min-width: 102px;
+		/* min-width: 102px; */
 		padding: 6px 8px 7px;
 		width: 100%;
 	}

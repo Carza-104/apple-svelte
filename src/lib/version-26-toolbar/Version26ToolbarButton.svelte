@@ -45,7 +45,7 @@
 
 	.symbol {
 		align-items: center;
-		color: var(--colors-accent);
+		color: var(--labels-primary);
 		display: flex;
 		font-feature-settings: 'ss16' on;
 		font-size: calc(17px * var(--large-symbol-font-size-multiplier));

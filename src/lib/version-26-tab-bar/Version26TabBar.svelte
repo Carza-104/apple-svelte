@@ -16,6 +16,7 @@
 		margin: 16px 28px 32px;
 		padding: 4px;
 		position: fixed;
+		width: calc(100vw - 96px);
 	}
 
 	div::before {
