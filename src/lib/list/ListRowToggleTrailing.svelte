@@ -68,7 +68,9 @@
 	div {
 		background: var(--grays-white);
 		border-radius: 50%;
-		box-shadow: 0px 3px 1px rgb(0, 0, 0, 0.06), 0px 3px 8px rgb(0, 0, 0, 0.15),
+		box-shadow:
+			0px 3px 1px rgb(0, 0, 0, 0.06),
+			0px 3px 8px rgb(0, 0, 0, 0.15),
 			0px 0px 0px 1px rgb(0, 0, 0, 0.04);
 		height: 27px;
 		margin: 0px 2px;
@@ -82,8 +84,8 @@
 	}
 
 	input:focus + div {
-		background: linear-gradient(var(--colors-accent-2) 0%, var(--colors-accent-2)),
-			var(--grays-white);
+		background:
+			linear-gradient(var(--colors-accent-2) 0%, var(--colors-accent-2)), var(--grays-white);
 		outline: 2px solid var(--colors-accent);
 		outline-offset: -2px;
 	}

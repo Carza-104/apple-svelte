@@ -181,8 +181,8 @@
 	}
 
 	button:active {
-		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
-			var(--button-background) !important;
+		background:
+			linear-gradient(var(--press-overlay) 0%, var(--press-overlay)), var(--button-background) !important;
 		opacity: unset !important;
 		outline: unset !important;
 	}

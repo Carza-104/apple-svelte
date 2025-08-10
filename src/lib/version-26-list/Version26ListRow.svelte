@@ -198,8 +198,8 @@
 	}
 
 	.row:active {
-		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
-			var(--bg-grouped-secondary) !important;
+		background:
+			linear-gradient(var(--press-overlay) 0%, var(--press-overlay)), var(--bg-grouped-secondary) !important;
 	}
 
 	.row:focus {

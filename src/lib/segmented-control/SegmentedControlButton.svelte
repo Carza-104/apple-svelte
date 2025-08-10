@@ -67,7 +67,9 @@
 	label:has(> input:checked) {
 		background: var(--grays-white);
 		border: 0.5px solid rgb(0, 0, 0, 0.04);
-		box-shadow: 0px 3px 1px rgb(0, 0, 0, 0.04), 0px 3px 8px rgb(0, 0, 0, 0.12);
+		box-shadow:
+			0px 3px 1px rgb(0, 0, 0, 0.04),
+			0px 3px 8px rgb(0, 0, 0, 0.12);
 	}
 
 	input:checked + p {

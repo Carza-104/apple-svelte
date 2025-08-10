@@ -145,8 +145,8 @@
 	}
 
 	button:active {
-		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
-			var(--materials-regular);
+		background:
+			linear-gradient(var(--press-overlay) 0%, var(--press-overlay)), var(--materials-regular);
 		border: unset !important;
 		opacity: unset !important;
 	}

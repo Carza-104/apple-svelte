@@ -146,7 +146,7 @@
 	}
 
 	button:hover {
-		background: linear-gradient(var(--press-overlay) 0%, var(--press-overlay)),
-			var(--liquid-glass-small-bg);
+		background:
+			linear-gradient(var(--press-overlay) 0%, var(--press-overlay)), var(--liquid-glass-small-bg);
 	}
 </style>
