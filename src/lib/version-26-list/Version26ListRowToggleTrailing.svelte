@@ -31,6 +31,18 @@
 	}
 </script>
 
+<svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+	<filter height="100%" id="displacementDistortionFilter" width="100%" x="0px" y="0px">
+		<!-- <feImage href="%sveltekit.assets%/filter.svg" result="colorMap" /> -->
+		<feDisplacementMap
+			in="SourceGraphic"
+			in2="colorMap"
+			scale="50"
+			xChannelSelector="R"
+			yChannelSelector="G"
+		/>
+	</filter>
+</svg>
 <label style="{style}; background: {backgroundStyle}">
 	{#if state === 'on'}
 		<input
@@ -50,7 +62,7 @@
 			type="checkbox"
 		/>
 	{/if}
-	<div style="margin: {marginStyle}" />
+	<div style="margin: {marginStyle}"></div>
 </label>
 
 <style>
@@ -68,7 +80,9 @@
 	div {
 		background: var(--grays-white);
 		border-radius: 24px;
-		box-shadow: 0px 3px 1px rgb(0, 0, 0, 0.06), 0px 3px 8px rgb(0, 0, 0, 0.15),
+		box-shadow:
+			0px 3px 1px rgb(0, 0, 0, 0.06),
+			0px 3px 8px rgb(0, 0, 0, 0.15),
 			0px 0px 0px 1px rgb(0, 0, 0, 0.04);
 		height: 24px;
 		margin: 0px 2px;
@@ -76,14 +90,29 @@
 		width: 39px;
 	}
 
+	label:has(input:active) {
+		overflow: unset;
+	}
+
 	input:active + div {
-		background: var(--grays-white) !important;
+		-webkit-backdrop-filter: blur(calc(5px + var(--liquid-glass-small-background-blur-addend) / 2));
+		backdrop-filter: blur(calc(5px + var(--liquid-glass-small-background-blur-addend) / 2));
+		background: var(--liquid-glass-small-bg);
 		outline: unset !important;
+		transform: scale(1.5);
+		transition: transform 0.25s ease;
+	}
+
+	@supports (-webkit-app-region: inherit) {
+		input:active + div {
+			backdrop-filter: blur(calc(var(--liquid-glass-small-background-blur-addend) / 2))
+				url(#displacementDistortionFilter);
+		}
 	}
 
 	input:focus + div {
-		background: linear-gradient(var(--colors-accent-2) 0%, var(--colors-accent-2)),
-			var(--grays-white);
+		background:
+			linear-gradient(var(--colors-accent-2) 0%, var(--colors-accent-2)), var(--grays-white);
 		outline: 2px solid var(--colors-accent);
 		outline-offset: -2px;
 	}
