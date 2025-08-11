@@ -48,7 +48,12 @@
 />
 
 <label style="display: {displayStyle}; height: {heightStyle}; width: {widthStyle}">
-	<button bind:this={inputElement} class="hidden-input" on:click={handlePress} />
+	<button
+		aria-label="Close action sheet"
+		bind:this={inputElement}
+		class="hidden-input"
+		on:click={handlePress}
+	></button>
 	<div class="action-sheet" {id} {style}>
 		<div class="buttons">
 			{#if showHeader}

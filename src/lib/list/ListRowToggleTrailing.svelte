@@ -50,7 +50,7 @@
 			type="checkbox"
 		/>
 	{/if}
-	<div style="margin: {marginStyle}" />
+	<div style="margin: {marginStyle}"></div>
 </label>
 
 <style>

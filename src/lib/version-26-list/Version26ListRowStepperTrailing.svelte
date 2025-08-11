@@ -30,7 +30,7 @@
 	<button bind:this={decrementInputElement} class="symbol" on:click={handleDecrementPress}
 		>{decrement}</button
 	>
-	<div class="separator" />
+	<div class="separator"></div>
 	<button bind:this={incrementInputElement} class="symbol" on:click={handleIncrementPress}
 		>{increment}</button
 	>

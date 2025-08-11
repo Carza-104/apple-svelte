@@ -103,7 +103,12 @@
 <label
 	style="display: {backgroundDisplayStyle}; height: {backgroundHeightStyle}; width: {backgroundWidthStyle}"
 >
-	<button bind:this={inputElement} class="hidden-input" on:click={handlePress} />
+	<button
+		aria-label="Close sidebar"
+		bind:this={inputElement}
+		class="hidden-input"
+		on:click={handlePress}
+	></button>
 </label>
 
 <style>

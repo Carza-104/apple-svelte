@@ -42,7 +42,7 @@
 		{/if}
 		<p>{label}</p>
 	</label>
-	<div class="separator" />
+	<div class="separator"></div>
 </div>
 
 <style>

@@ -128,10 +128,10 @@
 				<img alt={imageAlt} src={image} />
 			{:else}
 				<div class="collection">
-					<div class="rect" />
-					<div class="rect" />
-					<div class="rect" />
-					<div class="rect" />
+					<div class="rect"></div>
+					<div class="rect"></div>
+					<div class="rect"></div>
+					<div class="rect"></div>
 				</div>
 			{/if}
 		{/if}

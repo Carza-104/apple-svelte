@@ -45,7 +45,12 @@
 />
 
 <label style="display: {displayStyle}; height: {heightStyle}; width: {widthStyle}">
-	<button bind:this={inputElement} class="hidden-input" on:click={handlePress} />
+	<button
+		aria-label="Close alert"
+		bind:this={inputElement}
+		class="hidden-input"
+		on:click={handlePress}
+	></button>
 	<div class="alert liquid-glass liquid-glass-medium" {id} {style}>
 		<div class="title-and-description">
 			<p class="headline">{title}</p>

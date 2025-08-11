@@ -24,22 +24,22 @@
 	<div class="spinner">
 		<div class="container">
 			<div class="vertical">
-				<div class="rect-vertical" style="opacity: {opacityStyle[0]}" />
-				<div class="rect-vertical" style="opacity: {opacityStyle[4]}" />
+				<div class="rect-vertical" style="opacity: {opacityStyle[0]}"></div>
+				<div class="rect-vertical" style="opacity: {opacityStyle[4]}"></div>
 			</div>
 			<div class="horizontal">
-				<div class="rect-horizontal" style="opacity: {opacityStyle[6]}" />
-				<div class="rect-horizontal" style="opacity: {opacityStyle[2]}" />
+				<div class="rect-horizontal" style="opacity: {opacityStyle[6]}"></div>
+				<div class="rect-horizontal" style="opacity: {opacityStyle[2]}"></div>
 			</div>
 		</div>
 		<div class="container rotated">
 			<div class="vertical">
-				<div class="rect-vertical" style="opacity: {opacityStyle[1]}" />
-				<div class="rect-vertical" style="opacity: {opacityStyle[5]}" />
+				<div class="rect-vertical" style="opacity: {opacityStyle[1]}"></div>
+				<div class="rect-vertical" style="opacity: {opacityStyle[5]}"></div>
 			</div>
 			<div class="horizontal">
-				<div class="rect-horizontal" style="opacity: {opacityStyle[7]}" />
-				<div class="rect-horizontal" style="opacity: {opacityStyle[3]}" />
+				<div class="rect-horizontal" style="opacity: {opacityStyle[7]}"></div>
+				<div class="rect-horizontal" style="opacity: {opacityStyle[3]}"></div>
 			</div>
 		</div>
 	</div>
